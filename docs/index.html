@@ -1,0 +1,14 @@
+<!doctype html><meta charset="utf-8"><title>しっとる サービス資料</title>
+<style>body{font-family:"Hiragino Sans",sans-serif;max-width:760px;margin:40px auto;padding:0 20px;color:#13343B;line-height:1.8}
+h1{font-size:22px}h2{font-size:15px;color:#0C6D73;margin-top:28px;border-bottom:2px solid #E1EAEA;padding-bottom:6px}
+a{color:#0E8388}ul{padding-left:18px}small{color:#4C6B67}</style>
+<h1>株式会社しっとる サービス資料</h1>
+<p><small>Notionのサービス別ページから読み込まれる資料の置き場です。2026年8月31日時点の最新版。</small></p>
+<p><small>※ 社内用（原価・粗利を含む研修資料）はここには置いていません。</small></p>
+<div id="l"></div>
+<script>
+fetch('manifest.json').then(r=>r.json()).then(m=>{
+  document.getElementById('l').innerHTML=Object.values(m).map(v=>
+    `<h2>${v.name}</h2><ul>`+v.docs.map(d=>`<li><a href="${d.file}">${d.label}</a></li>`).join('')+`</ul>`).join('');
+});
+</script>

@@ -1,0 +1,159 @@
+{
+ "igads": {
+  "name": "Instagram広告 運用代行",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "igads-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "igads-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "igads-client.pdf"
+   }
+  ]
+ },
+ "keiro": {
+  "name": "Keiro",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "keiro-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "keiro-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "keiro-client.pdf"
+   }
+  ]
+ },
+ "lp": {
+  "name": "LP制作サービス",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "lp-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "lp-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "lp-client.pdf"
+   }
+  ]
+ },
+ "threads": {
+  "name": "Threads Studio",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "threads-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "threads-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "threads-client.pdf"
+   },
+   {
+    "label": "④ 代理店向けのご案内",
+    "file": "threads-agency.pdf"
+   }
+  ]
+ },
+ "salonos": {
+  "name": "サロンOS",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "salonos-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "salonos-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "salonos-client.pdf"
+   }
+  ]
+ },
+ "salonkarte": {
+  "name": "サロンカルテ（予約・店舗運営）",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "salonkarte-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "salonkarte-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "salonkarte-client.pdf"
+   }
+  ]
+ },
+ "makaseru": {
+  "name": "マカセル",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "makaseru-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "makaseru-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "makaseru-client.pdf"
+   }
+  ]
+ },
+ "kuchikomi": {
+  "name": "口コミ作成アプリ 制作代行",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "kuchikomi-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "kuchikomi-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "kuchikomi-client.pdf"
+   }
+  ]
+ },
+ "handsnote": {
+  "name": "月刊 HANDS NOTE",
+  "docs": [
+   {
+    "label": "① サービス紹介（お客様向け）",
+    "file": "handsnote-general.pdf"
+   },
+   {
+    "label": "② はじめての方向け（専門用語なし）",
+    "file": "handsnote-beginner.pdf"
+   },
+   {
+    "label": "③ ご導入いただいた方向け",
+    "file": "handsnote-client.pdf"
+   }
+  ]
+ }
+}
