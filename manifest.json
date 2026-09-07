@@ -16,6 +16,23 @@
       }
     ]
   },
+  "jiko": {
+    "name": "交通事故コンサルティング",
+    "docs": [
+      {
+        "label": "① サービス紹介（お客様向け）",
+        "file": "jiko-general.pdf"
+      },
+      {
+        "label": "② はじめての方向け（専門用語なし）",
+        "file": "jiko-beginner.pdf"
+      },
+      {
+        "label": "③ ご導入いただいた方向け",
+        "file": "jiko-client.pdf"
+      }
+    ]
+  },
   "keiro": {
     "name": "Keiro",
     "docs": [
