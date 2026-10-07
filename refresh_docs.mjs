@@ -113,7 +113,11 @@ function build(prefixes) {
       if (s.keep?.includes(kind)) continue;
       const pptx = join(OUT, `${s.deck}_${suffix}.pptx`);
       if (!existsSync(pptx)) { console.warn(`生成物がありません: ${pptx}`); continue; }
-      sh(soffice, ["--headless", "--convert-to", "pdf", "--outdir", STAGING, pptx], { stdio: "ignore" });
+      // LibreOffice 26.8 は macOS の日本語の文字を自分で見つけられない（四角い記号に化ける）ので、置き場所を fonts.conf で教える
+      sh(soffice, ["--headless", "--convert-to", "pdf", "--outdir", STAGING, pptx], {
+        stdio: "ignore",
+        env: { ...process.env, FONTCONFIG_FILE: join(HERE, "fonts.conf") },
+      });
       const pdf = join(STAGING, `${s.deck}_${suffix}.pdf`);
       const dest = join(STAGING, `${p}-${kind}.pdf`);
       copyFileSync(pdf, dest);
@@ -139,6 +143,8 @@ function check() {
     const forbidden = FORBIDDEN.filter((w) => text.includes(w));
     if (forbidden.length) issues.push(`社内の言葉が入っている: ${forbidden.join("・")}`);
     if (EMOJI.test(text)) issues.push("絵文字が入っている");
+    const fonts = sh("pdffonts", [p]);
+    if (!/Hiragino|Noto|Gothic|Mincho/i.test(fonts)) issues.push("日本語の文字が埋め込まれていない（文字化けの恐れ）");
     const missing = Object.entries(REQUIRED)
       .filter(([name]) => !(name === "料金" && f.startsWith("handsnote")))
       .filter(([, re]) => !re.test(text))
