@@ -1,0 +1,154 @@
+{
+  "generatedAt": "2026-10-07T04:58:12.234Z",
+  "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
+  "choices": [
+    {
+      "choice": "Instagram広告運用代行",
+      "name": "インスタグラム広告 運用代行",
+      "tagline": "広告文の作成から配信・日々のチェックまで、AI秘書がまるごと代行",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/igads-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/igads-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "LP（ランディングページ）作成",
+      "name": "LP制作サービス",
+      "tagline": "業種と強みを教えていただくだけで、成約につながるLPに仕上げます",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/lp-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/lp-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "HP作成",
+      "name": "HP作成",
+      "tagline": "",
+      "docs": []
+    },
+    {
+      "choice": "公式LINE制作・運用サービス",
+      "name": "公式LINE制作・運用",
+      "tagline": "",
+      "docs": []
+    },
+    {
+      "choice": "Threads自動投稿アプリ",
+      "name": "Threads Studio",
+      "tagline": "Threadsを触ったことがなくても、公式LINEの中だけで毎日投稿が続く集客サービス。Meta AIに紹介してもらう呼びかけ文も毎朝届きます",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/threads-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/threads-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "サロンカルテ（予約・電子カルテ管理システム）",
+      "name": "サロンカルテ（予約・店舗運営）",
+      "tagline": "アプリ不要・ログイン不要。店舗専用のネット予約システム",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonkarte-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonkarte-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "マカセル（Instagram広告セルフ運用アプリ）",
+      "name": "マカセル",
+      "tagline": "Instagram・Facebook広告をAIと一緒に運用できるセルフ運用サービス",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/makaseru-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/makaseru-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "Keiro（公式LINEの流入経路計測ツール）",
+      "name": "Keiro",
+      "tagline": "広告のクリックから公式LINE登録、来店後の対応までまるごと自動化",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/keiro-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/keiro-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "サロンOS（集客・運営まるごとおまかせプラン）",
+      "name": "サロンOS",
+      "tagline": "しっとるの全サービス＋公式LINE制作に、毎月のグループ勉強会までつけたオールインワン",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonos-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonos-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    },
+    {
+      "choice": "口コミ作成アプリ制作",
+      "name": "口コミ作成アプリ 制作代行",
+      "tagline": "お客様は質問に答えるだけ。AIがGoogleマップ用の口コミ下書きを作ります",
+      "docs": [
+        {
+          "label": "サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/kuchikomi-general.pdf",
+          "updated": "2026-09-07"
+        },
+        {
+          "label": "はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/kuchikomi-beginner.pdf",
+          "updated": "2026-09-07"
+        }
+      ]
+    }
+  ]
+}
