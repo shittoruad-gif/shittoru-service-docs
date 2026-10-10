@@ -19,17 +19,23 @@ const SERVICES_JSON = join(HERE, "..", "service-catalog", "data", "services.json
 // ★選択肢の文字を変えたら、ここも同じ文字に直す（1文字でも違うと資料が付かない）。
 // docs が null のサービスは資料がまだ無い＝メールでは「面談でご案内します」とだけ書く。
 const FORM_CHOICES = [
-  { choice: "Instagram広告運用代行", docs: "igads", service: "insta-ad-agency" },
-  { choice: "LP（ランディングページ）作成", docs: "lp", service: "lp-seisaku" },
+  { choice: "Instagram広告運用代行", docs: "igads", service: "insta-ad-agency", lp: "https://ig-ads.s-toru.com/" },
+  { choice: "LP（ランディングページ）作成", docs: "lp", service: "lp-seisaku", lp: "https://shittoruad-gif.github.io/lp-seisaku-lp/" },
   { choice: "HP作成", docs: null, service: null, name: "HP作成" },
   { choice: "公式LINE制作・運用サービス", docs: null, service: null, name: "公式LINE制作・運用" },
-  { choice: "Threads自動投稿アプリ", docs: "threads", service: "threads-studio" },
-  { choice: "サロンカルテ（予約・電子カルテ管理システム）", docs: "salonkarte", service: "booking-system" },
-  { choice: "マカセル（Instagram広告セルフ運用アプリ）", docs: "makaseru", service: "makaseru" },
-  { choice: "Keiro（公式LINEの流入経路計測ツール）", docs: "keiro", service: "keiro" },
+  { choice: "Threads自動投稿アプリ", docs: "threads", service: "threads-studio", lp: "https://shittoruad-gif.github.io/threads-studio-lp/" },
+  { choice: "サロンカルテ（予約・電子カルテ管理システム）", docs: "salonkarte", service: "booking-system", lp: "https://shittoruad-gif.github.io/salonkarte-lp/" },
+  { choice: "マカセル（Instagram広告セルフ運用アプリ）", docs: "makaseru", service: "makaseru", lp: "https://shittoruad-gif.github.io/makaseru-lp/" },
+  { choice: "Keiro（公式LINEの流入経路計測ツール）", docs: "keiro", service: "keiro", lp: "https://keiro.s-toru.com/" },
   { choice: "サロンOS（集客・運営まるごとおまかせプラン）", docs: "salonos", service: "salon-os" },
-  { choice: "口コミ作成アプリ制作", docs: "kuchikomi", service: "kuchikomi-app" },
+  { choice: "口コミ作成アプリ制作", docs: "kuchikomi", service: "kuchikomi-app", lp: "https://kuchikomi.s-toru.com/" },
+  // ↓ いまのフォームには選択肢が無い。フォームに同じ文字の選択肢を足せば、そのまま資料と紹介ページが付く。
+  { choice: "交通事故コンサルティング", docs: "jiko", service: "jiko" },
+  { choice: "月刊 HANDS NOTE（臨床実技教材）", docs: "handsnote", service: "hands-note", lp: "https://shittoruad-gif.github.io/hands-note-lp/" },
 ];
+
+// 紹介ページ（LP）も資料と同じ並びに1行足す。自動返信（gas）は docs[] をそのまま並べるので、gas を貼り直さなくても届く。
+const LP_LABEL = "紹介ページ（Webで見る）";
 
 // お客様に送るのは「① サービス紹介」と「② はじめての方向け」だけ。
 // ③ご導入いただいた方向け・代理店向け・説明書は、検討中の方には送らない。
@@ -72,6 +78,7 @@ const choices = FORM_CHOICES.map((c) => {
     }
     if (entry.docs.length === 0) problems.push(`${c.choice} に送れる資料が0件です`);
   }
+  if (c.lp) entry.docs.push({ label: LP_LABEL, url: c.lp });
   return entry;
 });
 

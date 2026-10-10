@@ -42,7 +42,13 @@ const SHARED_SOURCES = [join(CODE, "service-catalog/data/services.json"), join(D
 const KINDS = { general: "1_一般向け", beginner: "3_はじめての方向け", client: "5_導入者向け" };
 
 // 公開資料に入ってはいけない言葉（2026-09-02 の漏えい事故の再発防止）
-const FORBIDDEN = ["原価", "粗利", "歩合", "営業トーク", "想定問答", "スタッフ研修", "社内用"];
+const FORBIDDEN = ["原価", "粗利", "歩合", "営業トーク", "想定問答", "スタッフ研修", "社内用",
+  // 2026-10-08 三上様：Moveactはしっとるの店でも代表（大木さん）の店でもない＝店名を出さず「導入店舗」と書く
+  "Moveact", "自社店舗", "自社実績", "自社実測", "自社運営", "直営",
+  // 代理店を悪く書かない
+  "代理店は高額", "代理店に頼む", "代理店いらず", "代理店に頼まず"];
+// 広告費の具体額は書かない（CLAUDE.md）。料金表の「広告費 月5万円以下」などは三上様の判断待ちのため、まず週の額だけを止める
+const AD_SPEND = /週\s?[0-9,]+円/;
 // 各資料に入っていなければならない項目。はじめての方向けは「お金のこと」など言い換えているので、どれか1つが入っていればよい
 // （HANDS NOTE は料金を出さない例外）
 const REQUIRED = {
@@ -138,11 +144,17 @@ function check() {
     const text = pdfText(p);
     const pages = pdfPages(p);
     const live = join(DOCS, f);
-    const livePages = existsSync(live) ? pdfPages(live) : 0;
+    // 2026-10-09 三上様「最初にことばをずらずら並べるのは変」→ 先頭の「この資料に出てくることば」ページをやめ、各ページの下に入れた。
+    // その分は薄くなって当然なので、公開中の版からそのページを除いた枚数と比べる
+    // 途中にはさむ「ここまでに出てきたことば」の1枚も、ことばが減れば無くなって当然なので、両方から除いて比べる
+    const glossaryPages = (t) => (t.match(/この資料に出てくることば|ここまでに出てきたことば/g) || []).length;
+    const liveGlossary = existsSync(live) ? glossaryPages(pdfText(live)) - glossaryPages(text) : 0;
+    const livePages = existsSync(live) ? pdfPages(live) - Math.max(0, liveGlossary) : 0;
     const issues = [];
     const forbidden = FORBIDDEN.filter((w) => text.includes(w));
     if (forbidden.length) issues.push(`社内の言葉が入っている: ${forbidden.join("・")}`);
     if (EMOJI.test(text)) issues.push("絵文字が入っている");
+    if (AD_SPEND.test(text)) issues.push(`広告費の具体額が入っている: ${text.match(AD_SPEND)[0]}`);
     const fonts = sh("pdffonts", [p]);
     if (!/Hiragino|Noto|Gothic|Mincho/i.test(fonts)) issues.push("日本語の文字が埋め込まれていない（文字化けの恐れ）");
     const missing = Object.entries(REQUIRED)
