@@ -2,40 +2,101 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Keiro｜ライトとプロの違い（プロをやめるとできなくなること）｜株式会社しっとる</title>
 <meta name="robots" content="noindex">
 <style>
-:root{--bg:#F4F7F7;--card:#FFFFFF;--ink:#13343B;--sub:#4C6B67;--accent:#0E8388;--line:#DCE6E6}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1E22;--card:#16292E;--ink:#E6F0EF;--sub:#9DB5B2;--accent:#4FC1C5;--line:#24393E}}
-:root[data-theme="dark"]{--bg:#0F1E22;--card:#16292E;--ink:#E6F0EF;--sub:#9DB5B2;--accent:#4FC1C5;--line:#24393E}
+:root{--bg:#F4F7F7;--card:#FFFFFF;--ink:#13343B;--sub:#4C6B67;--accent:#0E8388;--accent-ink:#FFFFFF;--line:#DCE6E6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1E22;--card:#16292E;--ink:#E6F0EF;--sub:#9DB5B2;--accent:#4FC1C5;--accent-ink:#0F1E22;--line:#24393E}}
+:root[data-theme="dark"]{--bg:#0F1E22;--card:#16292E;--ink:#E6F0EF;--sub:#9DB5B2;--accent:#4FC1C5;--accent-ink:#0F1E22;--line:#24393E}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;line-height:1.7}
 header,footer{max-width:1100px;margin:0 auto;padding:20px 16px 8px}
 .svc{font-size:13px;color:var(--sub);margin:0}
 h1{font-size:20px;margin:2px 0 4px}
-.meta{font-size:12px;color:var(--sub);margin:0}
+.meta{font-size:12px;color:var(--sub);margin:0 0 10px}
+.open{display:inline-block;background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:10px 16px;font:inherit;font-weight:bold;cursor:pointer}
 main{max-width:1100px;margin:0 auto;padding:8px 16px 8px;display:flex;flex-direction:column;gap:14px}
+main .pg{display:block}
 main img{display:block;width:100%;height:auto;border-radius:8px;border:1px solid var(--line);background:var(--card)}
 footer{padding-bottom:40px;font-size:13px;color:var(--sub)}
 footer a{color:var(--accent)}
 footer p{margin:6px 0}
+/* 1枚ずつの表示 */
+#vw{position:fixed;inset:0;background:#0B1416;color:#fff;display:none;z-index:10;touch-action:pan-x pan-y pinch-zoom;user-select:none;-webkit-user-select:none}
+#vw.on{display:block}
+body.vw-on{overflow:hidden}
+#stage{position:absolute;left:0;right:0;top:0;bottom:calc(64px + env(safe-area-inset-bottom));overflow:hidden}
+#slide{position:absolute;left:50%;top:50%;transform-origin:center center;background:#fff;border-radius:4px}
+#bar{position:absolute;left:0;right:0;bottom:0;height:calc(64px + env(safe-area-inset-bottom));padding:8px 12px env(safe-area-inset-bottom);display:flex;align-items:center;gap:8px;background:#0B1416;border-top:1px solid #24393E}
+#bar button{flex:0 0 auto;background:#1C3439;color:#fff;border:0;border-radius:8px;height:44px;padding:0 12px;font:inherit;font-size:14px;cursor:pointer}
+#bar button:disabled{opacity:.35}
+#bar .grow{flex:1;text-align:center;font-size:14px;color:#cfe3e2;white-space:nowrap}
+#hint{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);background:rgba(0,0,0,.75);padding:12px 18px;border-radius:10px;font-size:15px;text-align:center;pointer-events:none;transition:opacity .4s;width:max-content;max-width:80vw}
 </style>
 </head>
 <body>
 <header>
 <p class="svc">Keiro</p>
 <h1>ライトとプロの違い（プロをやめるとできなくなること）</h1>
-<p class="meta">全2ページ・2026-09-28 更新・下へスクロールしてご覧ください（指で広げると拡大できます）</p>
+<p class="meta">全2ページ・2026-09-28 更新</p>
+<button class="open" type="button" data-i="0">1枚ずつ大きく見る</button>
 </header>
 <main>
-<img src="keiro-plans/p-1.jpg" width="1600" height="2264" alt="Keiro｜ライトとプロの違い（プロをやめるとできなくなること） 1ページ目">
-<img src="keiro-plans/p-2.jpg" width="1600" height="2264" alt="Keiro｜ライトとプロの違い（プロをやめるとできなくなること） 2ページ目">
+<a class="pg" href="#p1" data-i="0"><img src="keiro-plans/p-1.jpg" width="1600" height="2264" alt="Keiro｜ライトとプロの違い（プロをやめるとできなくなること） 1ページ目"></a>
+<a class="pg" href="#p2" data-i="1"><img src="keiro-plans/p-2.jpg" width="1600" height="2264" alt="Keiro｜ライトとプロの違い（プロをやめるとできなくなること） 2ページ目"></a>
 </main>
 <footer>
 <p>保存したい方は <a href="../keiro-plans.pdf">PDFでダウンロード</a></p>
 <p><a href="../">ほかのサービスの資料</a></p>
 <p>ご不明な点は、お送りしたメールにそのままご返信ください。株式会社しっとる</p>
 </footer>
+<div id="vw" role="dialog" aria-label="1枚ずつ表示">
+<div id="stage"><img id="slide" alt=""><div id="hint">スマホを横に倒すと読めます</div></div>
+<div id="bar"><button id="list" type="button">一覧</button><button id="prev" type="button" aria-label="前のページ">前へ</button><span class="grow" id="no"></span><button id="rot" type="button">向き</button><button id="next" type="button" aria-label="次のページ">次へ</button></div>
+</div>
+<script>
+(function(){
+var P=["keiro-plans/p-1.jpg","keiro-plans/p-2.jpg"], W=1600, H=2264, i=0, rot=null;
+var vw=document.getElementById('vw'), st=document.getElementById('stage'), im=document.getElementById('slide'), no=document.getElementById('no'), hint=document.getElementById('hint');
+var mobile=matchMedia('(max-width: 820px), (pointer: coarse)').matches;
+function portrait(){return st.clientHeight>st.clientWidth;}
+function useRot(){return rot===null?portrait():rot;}
+function fit(){
+  var sw=st.clientWidth-8, sh=st.clientHeight-8, r=useRot(), bw=r?sh:sw, bh=r?sw:sh;
+  var w=Math.min(bw, bh*W/H), h=w*H/W;
+  im.style.width=w+'px'; im.style.height=h+'px';
+  im.style.transform='translate(-50%,-50%)'+(r?' rotate(90deg)':'');
+}
+function show(n){
+  i=Math.max(0,Math.min(P.length-1,n)); im.src=P[i]; im.alt=(i+1)+'ページ目';
+  no.textContent=(i+1)+' / '+P.length;
+  document.getElementById('prev').disabled=i===0; document.getElementById('next').disabled=i===P.length-1;
+  [i+1,i-1].forEach(function(k){if(P[k]){var x=new Image();x.src=P[k];}});
+  try{history.replaceState(null,'','#p'+(i+1));}catch(e){}
+  fit();
+}
+function open(n){vw.classList.add('on');document.body.classList.add('vw-on');show(n);
+  if(useRot()){hint.style.opacity=1;setTimeout(function(){hint.style.opacity=0;},2500);}else hint.style.opacity=0;}
+function close(){vw.classList.remove('on');document.body.classList.remove('vw-on');
+  var t=document.querySelectorAll('main .pg')[i]; if(t) t.scrollIntoView(); try{history.replaceState(null,'',location.pathname);}catch(e){}}
+document.querySelectorAll('[data-i]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open(+a.dataset.i);});});
+document.getElementById('prev').onclick=function(){show(i-1);};
+document.getElementById('next').onclick=function(){show(i+1);};
+document.getElementById('list').onclick=close;
+document.getElementById('rot').onclick=function(){rot=!useRot();fit();};
+addEventListener('resize',function(){rot=null;fit();});
+addEventListener('keydown',function(e){if(!vw.classList.contains('on'))return;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown')show(i+1);else if(e.key==='ArrowLeft'||e.key==='ArrowUp')show(i-1);else if(e.key==='Escape')close();});
+var sx=0,sy=0,multi=false;
+st.addEventListener('touchstart',function(e){multi=e.touches.length>1;sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
+st.addEventListener('touchend',function(e){if(multi||(window.visualViewport&&visualViewport.scale>1.05))return;
+  var t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;
+  if(Math.max(Math.abs(dx),Math.abs(dy))<40)return;
+  var d=Math.abs(dx)>Math.abs(dy)?dx:dy; show(d<0?i+1:i-1);},{passive:true});
+var m=location.hash.match(/^#p(d+)$/);
+if(m) open(+m[1]-1); else if(mobile) open(0);
+})();
+</script>
 </body>
 </html>
