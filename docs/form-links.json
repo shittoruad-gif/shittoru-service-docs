@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T05:52:21.974Z",
+  "generatedAt": "2026-10-10T06:26:02.311Z",
   "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
   "choices": [
     {
@@ -8,18 +8,22 @@
       "tagline": "広告文の作成から配信・日々のチェックまで、まるごと代行",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/igads-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/igads-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://ig-ads.s-toru.com/"
+        },
+        {
+          "label": "動画：よくある質問（約1分）",
+          "url": "https://www.youtube.com/watch?v=Cc6t_HCy9sA"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/igads-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/igads-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -29,18 +33,22 @@
       "tagline": "業種と強みを教えていただくだけで、成約につながるLPに仕上げます",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/lp-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/lp-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://shittoruad-gif.github.io/lp-seisaku-lp/"
+        },
+        {
+          "label": "動画：サービス紹介（約1分半）",
+          "url": "https://www.youtube.com/watch?v=8TNZOQdsL20"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/lp-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/lp-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -62,18 +70,22 @@
       "tagline": "Threadsを触ったことがなくても、公式LINEの中だけで毎日投稿が続く集客サービス。Meta AIに紹介してもらう呼びかけ文も毎朝届きます",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/threads-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/threads-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://shittoruad-gif.github.io/threads-studio-lp/"
+        },
+        {
+          "label": "動画：サービス紹介（約2分）",
+          "url": "https://www.youtube.com/watch?v=XVB4AbYvm_g"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/threads-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/threads-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -83,18 +95,18 @@
       "tagline": "アプリ不要・ログイン不要。店舗専用のネット予約システム",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonkarte-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonkarte-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://shittoruad-gif.github.io/salonkarte-lp/"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonkarte-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonkarte-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -104,18 +116,22 @@
       "tagline": "Instagram・Facebook広告を、アプリと一緒にご自身で運用できるサービス",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/makaseru-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/makaseru-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://shittoruad-gif.github.io/makaseru-lp/"
+        },
+        {
+          "label": "動画：サービス紹介（約2分）",
+          "url": "https://www.youtube.com/watch?v=1Xa0zc1LI8g"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -125,18 +141,22 @@
       "tagline": "広告のクリックから公式LINE登録、来店後の対応までまるごと自動化",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/keiro-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/keiro-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://keiro.s-toru.com/"
+        },
+        {
+          "label": "動画：サービス紹介（約2分）",
+          "url": "https://www.youtube.com/watch?v=1mLBERCa5Lk"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/keiro-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/keiro-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -146,14 +166,14 @@
       "tagline": "しっとるの全サービス＋公式LINE制作に、毎月のグループ勉強会までつけたオールインワン",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonos-general.pdf",
-          "updated": "2026-10-09"
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonos-general.html",
+          "updated": "2026-10-10"
         },
         {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/salonos-beginner.pdf",
-          "updated": "2026-10-09"
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonos-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -163,18 +183,22 @@
       "tagline": "お客様は質問に答えるだけ。Googleマップ用の口コミ下書きが自動でできます",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/kuchikomi-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/kuchikomi-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://kuchikomi.s-toru.com/"
+        },
+        {
+          "label": "動画：サービス紹介（約2分）",
+          "url": "https://www.youtube.com/watch?v=-hAvdYUfeCg"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/kuchikomi-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/kuchikomi-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     },
@@ -184,13 +208,17 @@
       "tagline": "保険会社対応と患者教育を、はじめから終わりまで",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/jiko-general.pdf",
+          "label": "紹介ページ（まずはこちらで概要を）",
+          "url": "https://shittoruad-gif.github.io/jiko-consul-lp/"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/jiko-general.html",
           "updated": "2026-09-07"
         },
         {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/jiko-beginner.pdf",
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/jiko-beginner.html",
           "updated": "2026-09-07"
         }
       ]
@@ -201,18 +229,18 @@
       "tagline": "新人教育の実技を、院単位で使い放題にする月刊の教材",
       "docs": [
         {
-          "label": "サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/handsnote-general.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/handsnote-beginner.pdf",
-          "updated": "2026-10-09"
-        },
-        {
-          "label": "紹介ページ（Webで見る）",
+          "label": "紹介ページ（まずはこちらで概要を）",
           "url": "https://shittoruad-gif.github.io/hands-note-lp/"
+        },
+        {
+          "label": "資料：サービス紹介",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/handsnote-general.html",
+          "updated": "2026-10-10"
+        },
+        {
+          "label": "資料：はじめての方向け（専門用語なし）",
+          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/handsnote-beginner.html",
+          "updated": "2026-10-10"
         }
       ]
     }

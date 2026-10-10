@@ -1,0 +1,18 @@
+{
+  "_説明": "資料一覧ページ（docs/index.html）と無料相談の自動返信が使う、サービスごとの紹介ページ・動画。動画IDは株式会社しっとるのYouTubeチャンネルで公開中のもの（2026-10-10 確認）。動画を差し替えたらここも直して node build_index.mjs と node build_form_links.mjs を実行。",
+  "order": ["igads", "makaseru", "threads", "lp", "keiro", "kuchikomi", "salonkarte", "salonos", "jiko", "handsnote"],
+  "services": {
+    "igads": { "lp": "https://ig-ads.s-toru.com/", "intro": { "id": "Cc6t_HCy9sA", "title": "よくある質問（約1分）" }, "playlist": "PLb6lZP9ckLuk", "for": "Instagram広告をまるごと任せたい方" },
+    "makaseru": { "lp": "https://shittoruad-gif.github.io/makaseru-lp/", "intro": { "id": "1Xa0zc1LI8g", "title": "サービス紹介（約2分）" }, "playlist": "PLYBdqu0OBO5M", "for": "広告を自分で、手間なく出したい方" },
+    "threads": { "lp": "https://shittoruad-gif.github.io/threads-studio-lp/", "intro": { "id": "XVB4AbYvm_g", "title": "サービス紹介（約2分）" }, "playlist": "PLCeTKnbmc7Vk", "for": "Threadsで毎日発信を続けたい方" },
+    "lp": { "lp": "https://shittoruad-gif.github.io/lp-seisaku-lp/", "intro": { "id": "8TNZOQdsL20", "title": "サービス紹介（約1分半）" }, "playlist": "PLCql1kALln8w", "for": "申し込みにつながるページがほしい方" },
+    "keiro": { "lp": "https://keiro.s-toru.com/", "intro": { "id": "1mLBERCa5Lk", "title": "サービス紹介（約2分）" }, "playlist": "PLIbGFXhpO8SA", "for": "どの宣伝が効いたか知りたい方" },
+    "kuchikomi": { "lp": "https://kuchikomi.s-toru.com/", "intro": { "id": "-hAvdYUfeCg", "title": "サービス紹介（約2分）" }, "playlist": "PLNo8f62fMFAA", "for": "Googleマップの口コミを増やしたい方" },
+    "salonkarte": { "lp": "https://shittoruad-gif.github.io/salonkarte-lp/", "for": "予約とカルテをまとめたい方" },
+    "salonos": { "for": "集客と運営をまとめて相談したい方" },
+    "jiko": { "lp": "https://shittoruad-gif.github.io/jiko-consul-lp/", "for": "交通事故の患者さんを増やしたい院" },
+    "handsnote": { "lp": "https://shittoruad-gif.github.io/hands-note-lp/", "for": "院内の勉強会を楽にしたい院" }
+  },
+  "overview": { "id": "KYo_J-pZihs", "title": "しっとるの集客サービス｜困りごとから選ぶ（約2分）", "playlist": "PLWd9p-U-sD_4" },
+  "channel": "https://www.youtube.com/channel/UColg2ApFxIJUfP1k2bF6LSg"
+}

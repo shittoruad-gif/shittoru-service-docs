@@ -178,6 +178,9 @@ function publish() {
   const results = JSON.parse(readFileSync(checked, "utf8"));
   if (results.some((r) => !r.ok)) { console.error("検査で止まった資料があるので公開しません"); process.exit(2); }
   for (const r of results) copyFileSync(join(STAGING, r.file), join(DOCS, r.file));
+  // 開けばその場で読めるページ（docs/v/）→ 資料一覧 → 自動返信の対応表 の順に作り直す
+  sh("node", ["build_viewers.mjs"], { cwd: HERE, stdio: "inherit" });
+  sh("node", ["build_index.mjs"], { cwd: HERE, stdio: "inherit" });
   sh("node", ["build_form_links.mjs"], { cwd: HERE, stdio: "inherit" });
   sh("git", ["add", "docs"], { cwd: HERE });
   const names = results.map((r) => r.file).join(" ");
