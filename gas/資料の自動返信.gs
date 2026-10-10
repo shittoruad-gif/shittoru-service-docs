@@ -185,3 +185,13 @@ function docsTestWithLatestResponse() {
   MailApp.sendEmail(docsAdminEmail_(), '【試し送信】' + mail.subject, mail.text, { htmlBody: mail.html, name: DOCS_SENDER_NAME });
   Logger.log('試し送信しました（宛先 ' + docsAdminEmail_() + '・回答者のメール ' + docsExtractEmail_(answers[DOCS_Q_CONTACT]) + '）');
 }
+
+/** 試運転用：「Instagram広告運用代行」を選んだ想定の文面を ADMIN_EMAIL へ送る（お客様には送らない） */
+function docsTestInstagram() {
+  var answers = {};
+  answers[DOCS_Q_NAME] = '三上';
+  answers[DOCS_Q_SERVICES] = ['Instagram広告運用代行'];
+  var mail = docsBuildMail_(answers, docsLoadFormLinks_());
+  MailApp.sendEmail(docsAdminEmail_(), '【試し送信】' + mail.subject, mail.text, { htmlBody: mail.html, name: DOCS_SENDER_NAME });
+  Logger.log('試し送信しました（宛先 ' + docsAdminEmail_() + '）');
+}
