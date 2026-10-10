@@ -78,6 +78,26 @@ const gitDate = (cwd, path) => {
   try { return statSync(path.startsWith("/") ? path : join(cwd, path)).mtime.toISOString(); } catch { return null; }
 };
 const pdfText = (f) => sh("pdftotext", ["-layout", f, "-"]);
+// 文字の重なり（2026-10-10 料金表に「ことばの説明」が重なったまま公開されていた）：別の行の文字の箱が縦に4割以上かぶるページを返す
+function overlapPages(f) {
+  const out = sh("pdftotext", ["-bbox", f, "-"]);
+  const pages = [];
+  let cur = null, n = 0;
+  for (const line of out.split("\n")) {
+    if (line.includes("<page ")) { cur = []; pages.push(cur); }
+    const m = line.match(/<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">/);
+    if (m && cur) cur.push(m.slice(1, 5).map(Number));
+  }
+  const bad = [];
+  pages.forEach((ws, pi) => {
+    for (let i = 0; i < ws.length; i++) for (let j = i + 1; j < ws.length; j++) {
+      const [a, b] = [ws[i], ws[j]];
+      const ix = Math.min(a[2], b[2]) - Math.max(a[0], b[0]), iy = Math.min(a[3], b[3]) - Math.max(a[1], b[1]);
+      if (ix > 2 && iy > 2 && iy > 0.4 * Math.min(a[3] - a[1], b[3] - b[1]) && !(Math.abs(a[1] - b[1]) < 0.3 && Math.abs(a[0] - b[0]) < 0.3)) { bad.push(pi + 1); return; }
+    }
+  });
+  return bad;
+}
 const pdfPages = (f) => Number((sh("pdfinfo", [f]).match(/Pages:\s+(\d+)/) || [])[1] || 0);
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{1F000}-\u{1F2FF}]/u;
 
@@ -162,6 +182,8 @@ function check() {
       .filter(([, re]) => !re.test(text))
       .map(([name]) => name);
     if (missing.length) issues.push(`必要な項目が無い: ${missing.join("・")}`);
+    const ov = overlapPages(p);
+    if (ov.length) issues.push(`文字が重なっているページ: ${ov.join("・")}`);
     if (livePages && pages < livePages) issues.push(`公開中より薄い（${livePages}→${pages}ページ）`);
     if (/\d{1,3}(,\d{3})+円/.test(text) && f.startsWith("handsnote")) issues.push("HANDS NOTEに金額が出ている");
     results.push({ file: f, pages, livePages, ok: issues.length === 0, issues });
