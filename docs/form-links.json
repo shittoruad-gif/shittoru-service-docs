@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T04:27:33.976Z",
+  "generatedAt": "2026-10-12T16:50:09.970Z",
   "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
   "choices": [
     {
@@ -101,12 +101,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonkarte-general.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonkarte-beginner.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         }
       ]
     },
@@ -168,12 +168,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonos-general.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonos-beginner.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         }
       ]
     },
@@ -193,12 +193,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/kuchikomi-general.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/kuchikomi-beginner.html",
-          "updated": "2026-10-11"
+          "updated": "2026-10-12"
         }
       ]
     },
