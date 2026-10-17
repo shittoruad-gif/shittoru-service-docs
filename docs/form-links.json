@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T01:36:22.207Z",
+  "generatedAt": "2026-10-17T16:49:35.882Z",
   "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
   "choices": [
     {
@@ -126,12 +126,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-general.html",
-          "updated": "2026-10-16"
+          "updated": "2026-10-17"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-beginner.html",
-          "updated": "2026-10-16"
+          "updated": "2026-10-17"
         }
       ]
     },
