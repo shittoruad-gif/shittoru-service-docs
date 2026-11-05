@@ -156,6 +156,19 @@
     .num{width:30px;height:30px;font-size:13px}
     body{font-size:15.5px}
   }
+
+  /* 目次：スマホは折りたたまずに上に、PCは左に残す（スクロールしても見える） */
+  .toc{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 18px;margin:0 0 20px;font-size:14px}
+  .toc b{display:block;margin-bottom:6px}
+  .toc ol{margin:0;padding-left:1.2em;line-height:1.9}
+  .toc a{color:inherit}
+  @media (min-width:1100px){
+    .wrap{max-width:1240px;display:grid;grid-template-columns:250px minmax(0,1fr);column-gap:48px;padding:0 32px 96px}
+    .wrap>header,.wrap>footer{grid-column:1/-1}
+    .wrap>.toc{grid-column:1;position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow:auto;margin-top:16px}
+    .wrap>main.body{grid-column:2;min-width:0}
+    .step>div:last-child{max-width:880px}
+  }
   @media print{
     body{background:#fff}
     .step{break-inside:avoid} .clock,.closing,.overview{break-inside:avoid}
@@ -190,8 +203,11 @@
     <span class="chip">途中でやめて再開できます</span>
   </div>
 </header>
+<nav class="toc" aria-label="目次"><b>目次</b><ol><li><a href="#overview">いまどこにいるか</a></li><li><a href="#step1">STEP 1　Threadsとは何か、を知る</a></li><li><a href="#step2">STEP 2　Instagramのアカウントを作る</a></li><li><a href="#step3">STEP 3　Threadsのアカウントを作る</a></li><li><a href="#step4">STEP 4　Threadsのプロフィールを整える</a></li><li><a href="#step5">STEP 5　Threads Studioに会員登録する</a></li><li><a href="#step6">STEP 6　公式LINEとつなぐ</a></li><li><a href="#step7">STEP 7　「はじめの設定」に答える</a></li><li><a href="#step8">STEP 8　Threadsアカウントを連携する</a></li><li><a href="#step9">STEP 9　固定投稿を作って、ピン留めする</a></li><li><a href="#step10">STEP 10　毎日の運用</a></li></ol></nav>
+<main class="body">
 
-<section class="overview">
+
+<section class="overview" id="overview">
   <h2>まず、いまどこにいるかを確かめます</h2>
   <p class="pick">下から、いまのご自分にいちばん近いものをお選びください。そこから読み始めれば大丈夫です。</p>
   <table class="t2">
@@ -220,7 +236,7 @@
 
 <div class="phase"><b>準備編</b><small>STEP 1 - 4　Threadsを使える状態にする</small></div>
 
-<section class="step">
+<section class="step" id="step1">
   <div class="rail"><div class="num">1</div><div class="line"></div></div>
   <div>
     <h3>Threadsとは何か、を知る</h3>
@@ -235,7 +251,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step2">
   <div class="rail"><div class="num">2</div><div class="line"></div></div>
   <div>
     <h3>Instagramのアカウントを作る</h3>
@@ -255,7 +271,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step3">
   <div class="rail"><div class="num">3</div><div class="line"></div></div>
   <div>
     <h3>Threadsのアカウントを作る</h3>
@@ -275,7 +291,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step4">
   <div class="rail"><div class="num">4</div><div class="line"></div></div>
   <div>
     <h3>Threadsのプロフィールを整える</h3>
@@ -299,7 +315,7 @@
 <div class="phase"><b>運用編</b><small>STEP 5 - 10　Threads Studioの設定</small></div>
 <p class="pick" style="margin-top:16px">ここからの設定は、<strong>公式LINEのトーク</strong>からでも<strong>アプリの画面</strong>からでも進められます。どちらか一方だけで大丈夫です。スマートフォンだけで終わる<strong>公式LINEをおすすめしています</strong>（Threadsの連携だけはパソコンが確実です）。</p>
 
-<section class="step">
+<section class="step" id="step5">
   <div class="rail"><div class="num">5</div><div class="line"></div></div>
   <div>
     <h3>Threads Studioに会員登録する</h3>
@@ -320,7 +336,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step6">
   <div class="rail"><div class="num">6</div><div class="line"></div></div>
   <div>
     <h3>公式LINEとつなぐ</h3>
@@ -353,7 +369,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step7">
   <div class="rail"><div class="num">7</div><div class="line"></div></div>
   <div>
     <h3>「はじめの設定」に答える</h3>
@@ -393,7 +409,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step8">
   <div class="rail"><div class="num">8</div><div class="line"></div></div>
   <div>
     <h3>Threadsアカウントを連携する</h3>
@@ -428,7 +444,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step9">
   <div class="rail"><div class="num">9</div><div class="line"></div></div>
   <div>
     <h3>固定投稿を作って、ピン留めする</h3>
@@ -466,7 +482,7 @@
   </div>
 </section>
 
-<section class="step">
+<section class="step" id="step10">
   <div class="rail"><div class="num">10</div><div class="line"></div></div>
   <div>
     <h3>毎日の運用</h3>
@@ -597,6 +613,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   Threads集客 開設マニュアル ／ 株式会社しっとる<br>
   ご不明な点は、公式LINEのトークからそのままお送りください。担当者がお答えします。<br>
