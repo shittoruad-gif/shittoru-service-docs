@@ -1,0 +1,893 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>しっとる 集客サービス</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="治療院・サロン・店舗のための10の集客サービス。SNS投稿、広告、LP、公式LINE、予約、口コミ、スタッフ教育まで。株式会社しっとる">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&family=Outfit:wght@500;700;800&display=swap">
+<style>
+/* Layout: ロゴの「青い人と黄色い人」から取った2色。集客の流れを1本の“経路”として描き、各サービスはその上の駅として並べる */
+:root{
+  --bg:#F5F8FB; --surface:#FFFFFF; --ink:#0E2236; --sub:#566A7E; --line:#DCE5EE;
+  --blue:#0E6EB8; --sky:#28A7E1; --amber:#F8B62B; --amber-ink:#3A2800;
+  --soft:#E7F2FA; --amber-soft:#FEF4DC; --on-blue:#FFFFFF; --ok:#1F8A5B;
+  --shadow:0 1px 2px rgba(14,34,54,.06),0 8px 24px rgba(14,34,54,.06);
+  --f-display:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP",sans-serif;
+  --f-body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --f-num:"Outfit","Zen Kaku Gothic New",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1520;--surface:#11202F;--ink:#E5EEF6;--sub:#9DB0C3;--line:#21364A;
+  --blue:#4DB2EE;--sky:#6CCBF2;--amber:#F8B62B;--amber-ink:#2A1C00;
+  --soft:#14314A;--amber-soft:#3A2E12;--on-blue:#06141F;--ok:#4CC88D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1520;--surface:#11202F;--ink:#E5EEF6;--sub:#9DB0C3;--line:#21364A;
+  --blue:#4DB2EE;--sky:#6CCBF2;--amber:#F8B62B;--amber-ink:#2A1C00;
+  --soft:#14314A;--amber-soft:#3A2E12;--on-blue:#06141F;--ok:#4CC88D;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.85;-webkit-text-size-adjust:100%;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+@media (min-width:900px){body{padding-bottom:0}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+h1,h2,h3,h4{font-family:var(--f-display);line-height:1.35;margin:0;text-wrap:balance}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.n{font-family:var(--f-num);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;color:var(--blue)}
+.muted{color:var(--sub)}
+.note{font-size:12.5px;color:var(--sub);line-height:1.7}
+
+/* ボタン */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:15.5px;text-decoration:none;border-radius:999px;padding:13px 24px;border:0;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease;line-height:1.3;text-align:center}
+.btn:hover{transform:translateY(-1px)}
+.btn.main{background:var(--amber);color:var(--amber-ink);box-shadow:0 6px 18px rgba(248,182,43,.35)}
+.btn.blue{background:var(--blue);color:var(--on-blue)}
+.btn.ghost{background:transparent;color:var(--blue);border:1.5px solid var(--blue)}
+.btn small{font-family:var(--f-body);font-weight:500;font-size:12px;opacity:.85}
+.arrow::after{content:"→";font-family:var(--f-num)}
+
+/* ヘッダー */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;padding-block:9px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);flex:none}
+.brand img{width:34px;height:34px;object-fit:contain}
+.brand b{font-family:var(--f-display);font-weight:900;font-size:16px;line-height:1.1;display:block}
+.brand span{font-size:11px;color:var(--sub);display:block;line-height:1.2}
+.top nav{display:flex;gap:4px;margin-left:auto}
+.top nav a{font-size:14px;color:var(--ink);text-decoration:none;padding:6px 12px;border-radius:999px}
+.top nav a:hover{background:var(--soft)}
+.top .btn{padding:9px 18px;font-size:14px}
+@media (max-width:899px){.top nav{display:none}.top .btn{margin-left:auto}}
+
+/* ヒーロー */
+.hero{padding-block:44px 30px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:36px;align-items:center}
+@media (max-width:899px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+.hello{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;background:var(--surface);border:1px solid var(--line);padding:5px 14px 5px 6px;border-radius:999px;color:var(--ink)}
+.hello i{font-style:normal;background:var(--ink);color:var(--surface);font-family:var(--f-num);font-weight:800;border-radius:999px;width:22px;height:22px;display:grid;place-items:center;font-size:13px}
+.hero h1{font-size:clamp(29px,4.6vw,52px);font-weight:900;letter-spacing:-.005em;margin-top:18px;line-height:1.25}
+.hero h1 .ln{display:block;white-space:nowrap}
+@media (max-width:360px){.hero h1 .ln{white-space:normal}}
+.hero h1 .u{background:linear-gradient(transparent 68%,color-mix(in srgb,var(--amber) 60%,transparent) 68%)}
+.hero h1 .b{color:var(--blue)}
+.hero .lead{margin-top:18px;font-size:16.5px;color:var(--sub);max-width:34em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trust li{font-size:13px;font-weight:500;display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+.trust li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ok)}
+
+/* 経路の図 */
+.routebox{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px 18px 16px;box-shadow:var(--shadow);position:relative}
+.routebox .cap{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+.routebox .cap b{font-family:var(--f-display);font-size:15px}
+.routebox .cap span{font-size:12px;color:var(--sub)}
+.routesvg{width:100%;height:auto;display:block;max-width:100%}
+.routesvg .track{fill:none;stroke:var(--soft);stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.routesvg .rail{fill:none;stroke:var(--blue);stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.4s .2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.routesvg .stn{fill:var(--surface);stroke:var(--blue);stroke-width:4}
+.routesvg .stn.x{stroke:var(--amber)}
+.routesvg text{font-family:var(--f-display);font-weight:700;font-size:15px;fill:var(--ink)}
+.routesvg .sv{font-family:var(--f-body);font-weight:500;font-size:11.5px;fill:var(--sub)}
+.routesvg .traveler{fill:var(--amber)}
+.routesvg .num{font-family:var(--f-num);font-weight:800;font-size:11px;fill:var(--blue)}
+@media (prefers-reduced-motion:reduce){.routesvg .rail{stroke-dashoffset:0}.routesvg .traveler{display:none}}
+
+/* セクション共通 */
+.sec{padding-block:64px}
+.sec-head{display:grid;gap:10px;margin-bottom:30px;max-width:44em}
+.sec-head h2{font-size:clamp(25px,3.8vw,36px);font-weight:900}
+.sec-head p{color:var(--sub)}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+
+/* 悩み */
+.pains{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:12px}
+.pain{display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 16px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s;min-width:0}
+.pain:hover{border-color:var(--blue);transform:translateY(-2px)}
+.pain .q{width:30px;height:30px;border-radius:50%;background:var(--amber-soft);color:var(--amber-ink);display:grid;place-items:center;font-weight:900;font-family:var(--f-display);grid-row:span 2}
+.pain p{font-weight:500;line-height:1.6}
+.pain span{font-size:13px;color:var(--blue);font-weight:700}
+.pain span::after{content:" →";font-family:var(--f-num)}
+
+/* 理由 */
+.reasons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+@media (max-width:820px){.reasons{grid-template-columns:1fr}}
+.reason{display:grid;gap:10px;align-content:start;padding:24px 22px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
+.reason .big{font-family:var(--f-num);font-weight:800;font-size:44px;line-height:1;color:var(--blue)}
+.reason .big small{font-family:var(--f-display);font-size:15px;color:var(--ink);margin-left:6px}
+.reason h3{font-size:19px}
+.reason p{color:var(--sub);font-size:14.5px}
+
+/* サービス一覧 */
+.stage{display:grid;grid-template-columns:200px minmax(0,1fr);gap:22px;padding-block:22px;border-top:1px dashed var(--line);position:relative}
+.stage:first-of-type{border-top:0}
+@media (max-width:820px){.stage{grid-template-columns:1fr;gap:12px}}
+.stage-label{display:grid;gap:4px;align-content:start;position:relative;padding-left:30px}
+.stage-label::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;border:4px solid var(--blue);background:var(--surface)}
+.stage-label .n{font-size:12px;font-weight:700;color:var(--blue);letter-spacing:.1em}
+.stage-label h3{font-size:20px}
+.stage-label p{font-size:13px;color:var(--sub);line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,262px),1fr));gap:14px}
+.card{display:grid;grid-template-rows:auto 1fr;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:transform .18s ease,border-color .18s;min-width:0}
+.card:hover{transform:translateY(-3px);border-color:var(--sky)}
+.card .vis{background:linear-gradient(160deg,var(--soft),var(--bg));padding:16px;height:190px;overflow:hidden;position:relative;border-bottom:1px solid var(--line)}
+.card .body{padding:16px 18px 18px;display:grid;gap:8px;align-content:start}
+.card h4{font-size:19px;font-weight:900}
+.card .tl{font-size:14px;color:var(--sub);line-height:1.65}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:4px}
+.price-from{font-family:var(--f-num);font-weight:800;font-size:18px}
+.price-from small{font-family:var(--f-body);font-weight:500;font-size:12px;color:var(--sub);margin-left:2px}
+.tag{font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:999px;background:var(--amber-soft);color:var(--amber-ink)}
+.tag.blue{background:var(--soft);color:var(--blue)}
+.tag.soon{background:var(--bg);color:var(--sub);border:1px solid var(--line)}
+.more{font-size:13.5px;font-weight:700;color:var(--blue);margin-top:2px}
+.more::after{content:" →";font-family:var(--f-num)}
+.salonos-cta{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;background:var(--ink);color:var(--surface);border-radius:20px;padding:24px}
+.salonos-cta h3{font-size:22px;color:var(--surface)}
+.salonos-cta p{color:color-mix(in srgb,var(--surface) 78%,transparent);font-size:14.5px;margin-top:4px}
+@media (max-width:700px){.salonos-cta{grid-template-columns:1fr}}
+
+/* 画面イメージ（モック） */
+.mk{font-family:var(--f-body);font-size:11px;line-height:1.5;color:var(--ink)}
+.mk .pane{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:var(--shadow)}
+.mk .ttl{font-weight:700;font-size:11.5px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.mk .lab{font-size:10px;color:var(--sub)}
+.mk .bar{height:8px;border-radius:4px;background:var(--soft);overflow:hidden}
+.mk .bar i{display:block;height:100%;background:var(--blue);border-radius:4px}
+.mk .bar i.a{background:var(--amber)}
+.mk .row{display:grid;grid-template-columns:62px 1fr 28px;gap:6px;align-items:center}
+.mk .bub{background:var(--surface);border:1px solid var(--line);border-radius:12px 12px 12px 3px;padding:6px 9px;max-width:88%}
+.mk .bub.me{background:#8DE055;border-color:#8DE055;color:#0B2A00;border-radius:12px 12px 3px 12px;margin-left:auto}
+.mk .chip{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:1px 8px;margin:2px 2px 0 0;background:var(--surface)}
+.mk .chip.on{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.mk .mbtn{display:block;text-align:center;background:var(--blue);color:var(--on-blue);border-radius:8px;padding:5px;font-weight:700}
+.mk .mbtn.a{background:var(--amber);color:var(--amber-ink)}
+.mk .cal{display:grid;grid-template-columns:repeat(5,1fr);gap:3px;text-align:center}
+.mk .cal b{font-weight:700;font-size:10px;color:var(--sub)}
+.mk .cal span{border-radius:4px;padding:2px 0;background:var(--soft);color:var(--blue);font-weight:700}
+.mk .cal span.x{background:var(--bg);color:var(--sub);font-weight:400}
+.mk .phone{width:132px;margin:0 auto;border:5px solid var(--ink);border-radius:20px;background:var(--surface);overflow:hidden;height:200px}
+.mk .shot{width:100%;height:auto;display:block;border-radius:10px;box-shadow:var(--shadow)}
+.mk .grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mk .stk{display:grid;gap:6px}
+.mk .badge{position:absolute;right:10px;bottom:10px;font-size:10px;background:color-mix(in srgb,var(--surface) 85%,transparent);border:1px solid var(--line);border-radius:999px;padding:1px 8px;color:var(--sub)}
+.card .vis .mk{height:100%}
+.detail-vis .mk .phone{height:auto;min-height:240px}
+
+/* 数字 */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.stats{grid-template-columns:1fr}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:6px;align-content:start;min-width:0}
+.stat .v{font-family:var(--f-num);font-weight:800;font-size:clamp(32px,4.4vw,44px);line-height:1.05;color:var(--blue)}
+.stat .v small{font-size:.45em;font-family:var(--f-display);color:var(--ink);margin-left:3px}
+.stat p{font-size:13.5px;color:var(--sub);line-height:1.6}
+.stat .who{font-size:12px;font-weight:700;color:var(--ink)}
+
+/* 診断 */
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.quiz-top{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.quiz-top .prog{flex:1;height:6px;background:var(--soft);border-radius:3px;overflow:hidden}
+.quiz-top .prog i{display:block;height:100%;width:0;background:var(--amber);transition:width .3s ease}
+.quiz-top span{font-family:var(--f-num);font-weight:700;font-size:13px;color:var(--sub)}
+.quiz-body{padding:22px 20px 24px}
+.quiz-q{font-family:var(--f-display);font-weight:900;font-size:clamp(19px,2.8vw,24px);margin-bottom:16px}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:10px}
+.opt{font:inherit;text-align:left;cursor:pointer;background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:13px 15px;color:var(--ink);font-weight:500;line-height:1.5;transition:border-color .15s,background .15s}
+.opt:hover{border-color:var(--blue);background:var(--soft)}
+.opt small{display:block;color:var(--sub);font-size:12.5px;font-weight:400;margin-top:2px}
+.quiz-back{margin-top:16px;font:inherit;font-size:13px;background:none;border:0;color:var(--sub);cursor:pointer;text-decoration:underline}
+.result-head{display:grid;gap:6px;margin-bottom:16px}
+.result-head h3{font-size:clamp(20px,3vw,26px);font-weight:900}
+.recs{display:grid;gap:10px}
+.rec{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 14px;align-items:center;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--bg)}
+.rec.top1{border-color:var(--amber);background:var(--amber-soft)}
+.rec .rank{font-family:var(--f-num);font-weight:800;font-size:22px;color:var(--blue);width:28px}
+.rec h4{font-size:17px}
+.rec p{font-size:13.5px;color:var(--sub);line-height:1.55;grid-column:2}
+.rec a{grid-row:1/span 2;grid-column:3;font-size:13.5px;font-weight:700;text-decoration:none;white-space:nowrap}
+@media (max-width:520px){.rec{grid-template-columns:auto minmax(0,1fr)}.rec a{grid-row:auto;grid-column:2}}
+.result-sum{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:baseline;margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+.result-sum b{font-family:var(--f-num);font-weight:800;font-size:26px}
+.result-act{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+
+/* シミュレーター */
+.sim{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start}
+@media (max-width:900px){.sim{grid-template-columns:1fr}}
+.sim-list{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.sim-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;align-items:center;padding:14px 18px;border-top:1px solid var(--line)}
+.sim-row:first-child{border-top:0}
+.sim-row.off{opacity:.45}
+.sim-row label.nm{display:flex;align-items:center;gap:10px;font-weight:700;cursor:pointer}
+.sim-row input[type=checkbox]{width:20px;height:20px;accent-color:var(--blue);flex:none}
+.sim-row .hint{grid-column:1/-1;font-size:12.5px;color:var(--sub);padding-left:30px;line-height:1.55}
+.sim-row select{font:inherit;font-size:13.5px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);max-width:100%}
+@media (max-width:600px){.sim-row{grid-template-columns:1fr}.sim-row select,.sim-row>.n{margin-left:30px;width:calc(100% - 30px)}}
+.sim-total{position:sticky;top:84px;background:var(--ink);color:var(--surface);border-radius:20px;padding:22px;display:grid;gap:12px}
+.sim-total .lbl{font-size:12.5px;opacity:.75}
+.sim-total .amt{font-family:var(--f-num);font-weight:800;font-size:40px;line-height:1.1}
+.sim-total .amt small{font-family:var(--f-display);font-size:15px;margin-left:4px}
+.sim-total .sub2{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13.5px;border-top:1px solid color-mix(in srgb,var(--surface) 22%,transparent);padding-top:12px}
+.sim-total .sub2 .n{text-align:right}
+.sim-total p{font-size:12px;opacity:.75;line-height:1.6}
+.sim-total .btn{width:100%}
+
+/* 流れ */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:st}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.steps{grid-template-columns:1fr}}
+.stp{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:grid;gap:6px;align-content:start;position:relative}
+.stp .n{font-weight:800;font-size:28px;color:var(--amber);line-height:1}
+.stp h3{font-size:17px}
+.stp p{font-size:14px;color:var(--sub)}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0 18px}
+summary{cursor:pointer;list-style:none;padding:15px 30px 15px 0;font-weight:700;position:relative;line-height:1.6}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:2px;top:12px;font-family:var(--f-num);font-size:22px;color:var(--blue);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 16px;color:var(--sub);font-size:14.5px}
+
+/* 最後のCTA */
+.final{background:linear-gradient(135deg,var(--blue),color-mix(in srgb,var(--blue) 60%,var(--sky)));color:var(--on-blue);border-radius:28px;padding:44px 28px;display:grid;gap:16px;text-align:left;position:relative;overflow:hidden}
+.final h2{font-size:clamp(26px,4vw,40px);font-weight:900;color:var(--on-blue)}
+.final p{max-width:40em;opacity:.92}
+.final .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.final .btn.ghost{color:var(--on-blue);border-color:var(--on-blue)}
+.final ul{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13.5px;opacity:.92}
+.final ul li::before{content:"✓ "}
+
+footer{padding-block:40px 32px;font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:64px}
+.foot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px}
+@media (max-width:760px){.foot{grid-template-columns:1fr}}
+.foot dl{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:0}
+.foot dt{font-weight:700;color:var(--ink)}
+.foot dd{margin:0}
+.copy{display:inline-flex;align-items:center;gap:8px}
+.copy code{font-family:var(--f-num);user-select:all;color:var(--ink)}
+.copy button{font:inherit;font-size:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:6px;padding:2px 8px;cursor:pointer}
+
+/* 下部固定バー（スマホ） */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:25;background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));display:grid;grid-template-columns:1fr 1.4fr;gap:8px}
+.dock .btn{padding:12px 10px;font-size:14.5px;width:100%}
+@media (min-width:900px){.dock{display:none}}
+
+/* 詳細ページ */
+#detail{padding-block:20px 40px}
+.crumb{display:flex;align-items:center;gap:8px;font-size:13.5px;margin-bottom:18px}
+.crumb a{text-decoration:none;font-weight:700}
+.crumb a::before{content:"← ";font-family:var(--f-num)}
+.d-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:30px;align-items:center}
+@media (max-width:860px){.d-hero{grid-template-columns:1fr}}
+.d-hero .stg{font-size:13px;font-weight:700;color:var(--blue)}
+.d-hero h1{font-size:clamp(30px,5vw,48px);font-weight:900;margin-top:8px}
+.d-hero .tagline{font-size:18px;font-weight:500;margin-top:12px;line-height:1.7}
+.d-hero .one{color:var(--sub);margin-top:12px}
+.d-hero .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.d-hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.detail-vis{background:linear-gradient(160deg,var(--soft),var(--bg));border:1px solid var(--line);border-radius:22px;padding:22px;position:relative;min-height:260px}
+.d-sec{margin-top:54px;display:grid;gap:18px}
+.d-sec>h2{font-size:clamp(21px,3vw,27px);font-weight:900}
+.d-pains{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.d-pains li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--amber);border-radius:10px;padding:12px 14px;font-weight:500;line-height:1.6}
+.flow{display:grid;gap:0;counter-reset:f;max-width:820px}
+.flow li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;position:relative;padding-bottom:16px}
+.flow li::before{counter-increment:f;content:counter(f);font-family:var(--f-num);font-weight:800;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:2px solid var(--blue);color:var(--blue);position:relative;z-index:1}
+.flow li::after{content:"";position:absolute;left:17px;top:36px;bottom:0;width:2px;background:var(--line)}
+.flow li:last-child::after{display:none}
+.flow .who{font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px;margin-right:6px;background:var(--soft);color:var(--blue)}
+.flow .who.you{background:var(--amber-soft);color:var(--amber-ink)}
+.flow p{padding-top:5px}
+.outs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:10px}
+.outs li{display:grid;grid-template-columns:22px 1fr;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;line-height:1.6;font-size:14.5px}
+.outs li::before{content:"";width:12px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg);margin:6px 0 0 3px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+.plan{background:var(--surface);border:1.5px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:8px;align-content:start;position:relative}
+.plan.rec{border-color:var(--amber)}
+.plan.rec::before{content:"おすすめ";position:absolute;top:-11px;left:18px;background:var(--amber);color:var(--amber-ink);font-size:11.5px;font-weight:700;padding:1px 10px;border-radius:999px}
+.plan h3{font-size:16px}
+.plan .p{font-family:var(--f-num);font-weight:800;font-size:30px;line-height:1.1}
+.plan .p small{font-family:var(--f-body);font-size:12.5px;font-weight:500;color:var(--sub);margin-left:3px}
+.plan ul{display:grid;gap:4px;font-size:13.5px;color:var(--sub)}
+.plan li::before{content:"・"}
+.terms{display:flex;flex-wrap:wrap;gap:8px}
+.terms li{font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 11px}
+.terms li b{color:var(--blue);margin-right:4px}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 14px;color:var(--ink)}
+.links a:hover{border-color:var(--blue);color:var(--blue)}
+.links a::after{content:"↗";font-family:var(--f-num);color:var(--sub)}
+.pair{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:10px}
+.pair a{display:grid;gap:2px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.pair a b{font-family:var(--f-display)}
+.pair a span{font-size:13px;color:var(--sub);line-height:1.55}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:40px}
+.pager a{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-decoration:none;color:var(--ink);display:grid;gap:2px}
+.pager a span{font-size:12px;color:var(--sub)}
+.pager a b{font-family:var(--f-display)}
+.pager a.nx{text-align:right}
+.d-cta{margin-top:50px;background:var(--ink);color:var(--surface);border-radius:24px;padding:30px 24px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center}
+.d-cta h2{font-size:clamp(21px,3vw,28px);color:var(--surface)}
+.d-cta p{color:color-mix(in srgb,var(--surface) 78%,transparent);font-size:14.5px;margin-top:6px}
+.d-cta .ctas{display:grid;gap:8px}
+@media (max-width:760px){.d-cta{grid-template-columns:1fr}}
+.d-cta .btn.ghost{color:var(--surface);border-color:color-mix(in srgb,var(--surface) 60%,transparent)}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo.png" alt=""><div><b>しっとる</b><span>店舗の集客パートナー</span></div></a>
+    <nav aria-label="ページ内">
+      <a href="#services">サービス</a>
+      <a href="#diagnose">1分診断</a>
+      <a href="#price">料金</a>
+      <a href="#faq">よくあるご質問</a>
+    </nav>
+    <a class="btn main" href="https://forms.gle/pykh67HNXvwQ4rcdA" target="_blank" rel="noopener">無料相談</a>
+  </div>
+</header>
+
+<main id="home">
+  <!-- ヒーロー -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hello"><i>@</i>Threadsから来てくださった方へ</span>
+        <h1><span class="ln">知ってもらう、から</span><span class="ln"><span class="u">また来てくれる</span>、まで。</span><span class="ln b">集客を、仕組みに。</span></h1>
+        <p class="lead">投稿、広告、ページ、公式LINE、予約、口コミ、スタッフ教育。治療院・サロン・店舗に必要な<b>10の仕組み</b>を、株式会社しっとるがご用意しています。必要なものだけ、ひとつから始められます。</p>
+        <div class="ctas">
+          <a class="btn main arrow" href="#diagnose">1分で、合うサービスを診断</a>
+          <a class="btn ghost" href="#services">サービスを見る</a>
+        </div>
+        <ul class="trust">
+          <li>グループの院2店舗で毎日実運用</li>
+          <li>7日間・14日間の無料お試しあり</li>
+          <li>相談・お見積りは無料</li>
+        </ul>
+      </div>
+      <div class="routebox" aria-label="集客の流れの図">
+        <div class="cap"><b>お客様がお店に来るまでの“経路”</b><span>しっとるは全部の駅をつなぎます</span></div>
+        <svg class="routesvg" viewBox="0 0 460 330" role="img" aria-label="投稿・広告からLP、公式LINE、予約、口コミ、再来までの流れ">
+          <path class="track" d="M40 60 H400 Q430 60 430 95 V130 Q430 165 395 165 H65 Q30 165 30 200 V235 Q30 270 65 270 H420"/>
+          <path id="rp" class="rail" d="M40 60 H400 Q430 60 430 95 V130 Q430 165 395 165 H65 Q30 165 30 200 V235 Q30 270 65 270 H420"/>
+          <g>
+            <circle class="stn" cx="60" cy="60" r="11"/><text x="60" y="34" text-anchor="middle">投稿・広告</text><text class="sv" x="60" y="92" text-anchor="middle">Threads / Instagram</text>
+            <circle class="stn" cx="230" cy="60" r="11"/><text x="230" y="34" text-anchor="middle">LP</text><text class="sv" x="230" y="92" text-anchor="middle">内容と料金を伝える</text>
+            <circle class="stn" cx="380" cy="60" r="11"/><text x="380" y="34" text-anchor="middle">公式LINE</text><text class="sv" x="380" y="92" text-anchor="middle">どこから来たか計測</text>
+            <circle class="stn x" cx="330" cy="165" r="11"/><text x="330" y="142" text-anchor="middle">予約・来店</text><text class="sv" x="330" y="196" text-anchor="middle">24時間ネット予約</text>
+            <circle class="stn" cx="140" cy="165" r="11"/><text x="140" y="142" text-anchor="middle">口コミ</text><text class="sv" x="140" y="196" text-anchor="middle">Googleマップへ</text>
+            <circle class="stn" cx="140" cy="270" r="11"/><text x="140" y="247" text-anchor="middle">また来てくれる</text><text class="sv" x="140" y="300" text-anchor="middle">LINE配信・回数券</text>
+            <circle class="stn x" cx="360" cy="270" r="11"/><text x="360" y="247" text-anchor="middle">院が強くなる</text><text class="sv" x="360" y="300" text-anchor="middle">教育・交通事故対応</text>
+          </g>
+          <circle class="traveler" r="7"><animateMotion dur="7s" begin="2.4s" repeatCount="indefinite" rotate="auto"><mpath href="#rp"/></animateMotion></circle>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 悩み -->
+  <section class="sec band" id="pains">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">こんなこと、ありませんか？</p>
+        <h2>当てはまるものを押すと、その答えのページへ移ります</h2>
+      </div>
+      <div class="pains" id="painList"></div>
+    </div>
+  </section>
+
+  <!-- 理由 -->
+  <section class="sec" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">しっとるが選ばれる理由</p>
+        <h2>机の上で作った道具は、ひとつもありません</h2>
+      </div>
+      <div class="reasons">
+        <div class="reason"><div class="big n">2<small>店舗</small></div><h3>自分たちの院で、毎日使っているもの</h3><p>グループの整体院・サロン2店舗で、予約・公式LINE・投稿・広告を実際に回しています。現場で不便が見つかれば、すぐに直します。</p></div>
+        <div class="reason"><div class="big n">1<small>本の線</small></div><h3>入口から再来まで、つながる</h3><p>投稿や広告で知ってもらい、ページで伝え、公式LINEでつながり、予約・口コミ・再来へ。どこで止まっているかが数字で分かります。</p></div>
+        <div class="reason"><div class="big n">0<small>円から</small></div><h3>ひとつから、小さく始められる</h3><p>Threads Studio・マカセルは7日間、Keiroは14日間の無料お試しつき。契約期間の縛りがないサービスも多く、合わなければやめられます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- サービス -->
+  <section class="sec band" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">10のサービス</p>
+        <h2>お客様が動く順番に、並べています</h2>
+        <p>カードを押すと、くわしい説明・料金・始め方のページが開きます。</p>
+      </div>
+      <div id="stageList"></div>
+      <a class="salonos-cta" href="#salonos" style="text-decoration:none">
+        <div><p class="eyebrow" style="color:var(--amber)">全部まとめて使うなら</p><h3>サロンOS ｜ 全サービス＋公式LINE制作＋毎月の勉強会</h3><p>月額81,000円（税込）・初期費用なし。ツールをばらばらに契約する代わりに、ひとつの契約で。</p></div>
+        <span class="btn main arrow">くわしく見る</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 数字 -->
+  <section class="sec" id="results">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">数字で見る</p>
+        <h2>導入した院・店舗で、実際に起きたこと</h2>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="who">Threads Studio</span><div class="v n">約7<small>倍</small></div><p>導入前後の1日の表示回数（比較できる5店舗の合計・2026年9月7日実測）</p></div>
+        <div class="stat"><span class="who">Threads Studio</span><div class="v n">12→959<small>回</small></div><p>導入前ほとんど投稿していなかった整体院の、1日の表示回数</p></div>
+        <div class="stat"><span class="who">交通事故コンサル</span><div class="v n">2.5<small>倍</small></div><p>1件あたりの平均通院回数（5.6回→14回）</p></div>
+        <div class="stat"><span class="who">交通事故コンサル</span><div class="v n">4.41<small>倍</small></div><p>治療費の合計（導入前後10件ずつ・¥308,100→¥1,357,960）</p></div>
+      </div>
+      <p class="note" style="margin-top:12px">一部の院・店舗の実測例です。件数が少ないものもあり、同じ結果をお約束するものではありません。</p>
+    </div>
+  </section>
+
+  <!-- 診断 -->
+  <section class="sec band" id="diagnose">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">1分診断</p>
+        <h2>3つの質問で、あなたのお店に合うサービスが分かります</h2>
+        <p>答えはこのページの中だけで使います。どこにも送られません。</p>
+      </div>
+      <div class="quiz" id="quiz">
+        <div class="quiz-top"><div class="prog"><i id="qProg"></i></div><span id="qCount" class="n">1 / 3</span></div>
+        <div class="quiz-body" id="qBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 料金シミュレーター -->
+  <section class="sec" id="price">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">料金シミュレーター</p>
+        <h2>使いたいものに印をつけると、毎月の目安が出ます</h2>
+        <p>表示は税込です。広告費・LINE公式アカウントの料金などの実費は、合計とは分けて表示します。</p>
+      </div>
+      <div class="sim">
+        <div class="sim-list" id="simList"></div>
+        <aside class="sim-total" aria-live="polite">
+          <span class="lbl">毎月のお支払い（目安・税込）</span>
+          <div class="amt n" id="simMonthly">0<small>円</small></div>
+          <div class="sub2">
+            <span>初期費用</span><span class="n" id="simInit">0円</span>
+            <span>別途の実費</span><span class="n" id="simExt">なし</span>
+          </div>
+          <p id="simNote">左の一覧から、気になるサービスに印をつけてください。</p>
+          <a class="btn main" href="https://forms.gle/pykh67HNXvwQ4rcdA" target="_blank" rel="noopener">この内容で無料相談する</a>
+        </aside>
+      </div>
+      <p class="note" style="margin-top:12px">交通事故コンサルティング（3ヶ月 600,000円〜・税別）と月刊 HANDS NOTE（正式リリース時に価格決定）は、シミュレーターに含めていません。2026年11月6日時点の料金です。</p>
+    </div>
+  </section>
+
+  <!-- 流れ -->
+  <section class="sec band" id="flow">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">ご相談の流れ</p>
+        <h2>相談だけで終わっても大丈夫です</h2>
+        <p>オンラインで全国からご相談いただけます。しつこい営業はいたしません。</p>
+      </div>
+      <div class="steps">
+        <div class="stp"><span class="n">01</span><h3>1分フォーム</h3><p>店舗名と、気になるサービスを選んで送るだけ。</p></div>
+        <div class="stp"><span class="n">02</span><h3>Zoomで無料相談</h3><p>いまの集客と困りごとを伺います。画面をお見せしながらご説明します。</p></div>
+        <div class="stp"><span class="n">03</span><h3>ご提案・お見積り</h3><p>必要なサービスだけを選び、総額をお出しします。</p></div>
+        <div class="stp"><span class="n">04</span><h3>設定はおまかせ</h3><p>アカウントの準備や初回の制作はこちらで進めます。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">よくあるご質問</p>
+        <h2>始める前に、よく聞かれること</h2>
+      </div>
+      <div class="faq">
+        <details><summary>どれから始めればいいか分かりません</summary><p>このページの「1分診断」で目安が出ます。迷ったら無料相談で、いまの状況を伺ってから一緒に選びます。全部を一度に始める必要はありません。</p></details>
+        <details><summary>ひとつだけ申し込むこともできますか？</summary><p>できます。どのサービスも単体でご利用いただけます。あとから組み合わせることもできます。</p></details>
+        <details><summary>治療院やサロン以外のお店でも使えますか？</summary><p>Threads Studio・Instagram広告・マカセル・LP制作・Keiro・口コミ作成アプリは、飲食店・教室・物販など店舗全般でお使いいただけます。交通事故コンサルティングと月刊 HANDS NOTE は治療院向けです。</p></details>
+        <details><summary>パソコンが苦手です。使いこなせますか？</summary><p>Threads Studio は公式LINEの中だけで操作が終わります。アカウントの準備や初回の設定は、こちらで代わりに行うか、Zoomで一緒に進めます。</p></details>
+        <details><summary>契約期間の縛りや、解約の条件は？</summary><p>サービスごとに異なります。Threads Studio・マカセル・Keiro・Instagram広告 運用代行は契約期間の縛りがありません。LP制作は12か月、サロンカルテは最低6ヶ月のご契約です。くわしくは各サービスのページをご覧ください。</p></details>
+        <details><summary>月額以外にかかる費用はありますか？</summary><p>広告費（Meta社へ直接お支払い）、LINE公式アカウントの月額・配信料金（LINEヤフー社へお支払い）、独自ドメインなどの実費は別途かかります。無料相談で総額をご案内します。</p></details>
+        <details><summary>成果は保証されますか？</summary><p>集客の成果をお約束することはできません。そのかわり、どこで止まっているかを数字で見えるようにし、効いていないところを一緒に直していきます。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 最後のCTA -->
+  <section class="wrap" id="cta">
+    <div class="final">
+      <p class="eyebrow" style="color:var(--amber)">まずは1分から</p>
+      <h2>あなたのお店の“経路”を、<br>一緒に見直しませんか。</h2>
+      <p>いま困っていること、使っている仕組み、ご予算を伺って、必要な範囲と費用をご提案します。送信は無料相談の受付で、お申し込みではありません。</p>
+      <div class="ctas">
+        <a class="btn main arrow" href="https://forms.gle/pykh67HNXvwQ4rcdA" target="_blank" rel="noopener">無料相談フォームを開く（1分）</a>
+        <a class="btn ghost" href="#diagnose">先に1分診断をする</a>
+      </div>
+      <ul><li>相談・お見積り無料</li><li>Zoomで全国対応</li><li>しつこい営業なし</li></ul>
+    </div>
+  </section>
+</main>
+
+<main id="detail" hidden></main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a class="brand" href="#top"><img src="assets/logo.png" alt=""><div><b>株式会社しっとる</b><span>店舗の集客パートナー</span></div></a>
+    </div>
+    <div>
+      <dl>
+        <dt>代表者</dt><dd>代表取締役 大木 和将</dd>
+        <dt>所在地</dt><dd>〒700-0901 岡山県岡山市北区本町6-36 第一セントラルビル4階</dd>
+        <dt>メール</dt><dd><span class="copy"><code id="mailAddr">shittoru@s-toru.com</code><button type="button" data-copy="mailAddr">コピー</button></span></dd>
+      </dl>
+      <p class="note" style="margin-top:14px">掲載の料金・内容は2026年11月6日時点のものです。実績の数値は個別の例で、成果をお約束するものではありません。Instagram・Threads・Facebook は Meta Platforms, Inc. の、LINE は LINEヤフー株式会社の商標です。</p>
+    </div>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn ghost" id="dockA" href="#diagnose">1分診断</a>
+  <a class="btn main" id="dockB" href="https://forms.gle/pykh67HNXvwQ4rcdA" target="_blank" rel="noopener">無料相談する</a>
+</div>
+
+<script>
+var FORM='https://forms.gle/pykh67HNXvwQ4rcdA';
+var DOC='https://shittoruad-gif.github.io/shittoru-service-docs/v/';
+
+/* ===== 画面イメージ ===== */
+var MOCK={
+threads:'<div class="mk" style="display:grid;grid-template-columns:118px 1fr;gap:10px;height:100%"><img class="shot" src="assets/threads-app.jpg" alt="Threads Studio の実際の画面"><div class="stk" style="align-content:center"><div class="bub">【今日の投稿案】肩こりで来られた方の8割が…<br><span class="lab">7:40 届きました</span></div><div class="bub me">これで投稿する</div><div class="bub">公開しました。19時に2件目を出します</div></div><span class="badge">実際の画面</span></div>',
+igads:'<div class="mk stk"><div class="pane"><div class="ttl">今週の広告予算<span class="n">¥3,420 / ¥5,000</span></div><div class="bar" style="margin-top:6px"><i class="a" style="width:68%"></i></div><div class="lab" style="margin-top:4px">上限に達したら自動で止まります</div></div><div class="pane"><div class="ttl">成果の良い広告<span class="lab">予約1件あたり</span></div><div class="stk" style="margin-top:6px"><div class="row"><span>① 肩こり</span><div class="bar"><i style="width:88%"></i></div><b class="n">¥1.8k</b></div><div class="row"><span>② 腰痛</span><div class="bar"><i style="width:64%"></i></div><b class="n">¥2.6k</b></div><div class="row"><span>③ 骨盤</span><div class="bar"><i style="width:38%"></i></div><b class="n">¥4.1k</b></div></div></div><span class="badge">画面イメージ</span></div>',
+makaseru:'<div class="mk stk"><div class="pane"><div class="ttl">広告の案ができました<span class="chip on">3案</span></div><div style="margin-top:6px;font-weight:700">朝起きると首が重い方へ</div><div class="lab">首・肩・背中をまとめてほぐす60分。まずはLINEでご相談ください。</div><div style="margin-top:6px"><span class="chip">表現チェック OK</span><span class="chip">画像 3枚</span><span class="chip">ショート動画</span></div></div><div class="grid2"><span class="mbtn">この案で出す</span><span class="mbtn a">作り直す</span></div><div class="pane"><div class="ttl">月曜のレポート<span class="lab">LINEで届きます</span></div><div class="lab">先週いちばん反応が良かったのは「首」の広告。来週も続けましょう。</div></div><span class="badge">画面イメージ</span></div>',
+lp:'<div class="mk" style="display:grid;place-items:center;height:100%"><div class="phone"><div class="stk" style="padding:7px;gap:4px"><div style="background:var(--blue);color:var(--on-blue);border-radius:6px;padding:8px 6px;font-weight:700">つらい腰痛、<br>ひとりで抱えていませんか</div><div class="pane" style="padding:5px">お悩み → 原因</div><div class="pane" style="padding:5px">選ばれる理由 3つ</div><div class="pane" style="padding:5px">料金 ¥4,980〜</div><div class="pane" style="padding:5px">よくあるご質問</div><span class="mbtn a">LINEで予約する</span></div></div><span class="badge">画面イメージ</span></div>',
+keiro:'<div class="mk stk"><div class="pane"><div class="ttl">どこから友だちになった？<span class="lab">今月</span></div><div class="stk" style="margin-top:6px"><div class="row"><span>Instagram広告</span><div class="bar"><i style="width:92%"></i></div><b class="n">32</b></div><div class="row"><span>店頭QR</span><div class="bar"><i style="width:46%"></i></div><b class="n">16</b></div><div class="row"><span>チラシ</span><div class="bar"><i style="width:31%"></i></div><b class="n">11</b></div><div class="row"><span>Threads</span><div class="bar"><i class="a" style="width:26%"></i></div><b class="n">9</b></div></div></div><div class="bub">はじめまして！ご来院は初めてですか？</div><div><span class="chip on">はじめて</span><span class="chip">通院中</span></div><span class="badge">画面イメージ</span></div>',
+salonkarte:'<div class="mk stk"><div class="pane"><div class="ttl">ご希望の日時を選んでください<span class="lab">11月</span></div><div class="cal" style="margin-top:6px"><b>月</b><b>火</b><b>水</b><b>木</b><b>金</b><span>○</span><span class="x">×</span><span>○</span><span>○</span><span class="x">×</span><span class="x">×</span><span>○</span><span>○</span><span class="x">×</span><span>○</span><span>○</span><span>○</span><span class="x">×</span><span>○</span><span>○</span></div></div><div class="bub">【予約確定】11/12(水) 10:00 骨盤調整60分。前日にもお知らせします</div><span class="badge">画面イメージ</span></div>',
+kuchikomi:'<div class="mk stk"><div class="pane"><div class="ttl">来店の目的は？</div><div style="margin-top:4px"><span class="chip on">肩こり</span><span class="chip">腰痛</span><span class="chip on">頭痛</span><span class="chip">姿勢</span></div><div class="ttl" style="margin-top:6px">通いはじめて</div><div><span class="chip">初めて</span><span class="chip on">3ヶ月</span><span class="chip">1年以上</span></div></div><span class="mbtn">口コミの下書きを作る</span><div class="pane"><div class="lab">下書き（自由に直せます）</div>長年の肩こりと頭痛で通いはじめて3ヶ月。毎回ていねいに説明してもらえて…</div><span class="badge">画面イメージ</span></div>',
+handsnote:'<div class="mk grid2" style="height:100%;align-content:center"><div class="pane" style="aspect-ratio:3/4;display:grid;align-content:end;background:var(--ink);color:var(--surface)"><span class="lab" style="color:var(--amber)">VOL.03</span><b style="font-size:15px;font-family:var(--f-display)">膝</b><span style="font-size:9.5px;opacity:.8">評価・手技・運動指導</span></div><div class="stk"><div class="pane">腰<span class="lab"> 74p</span></div><div class="pane">首肩<span class="lab"> 76p</span></div><div class="pane">足首・股関節</div><div class="pane">歩行</div><span class="lab">6冊・444ページ完成</span></div><span class="badge">画面イメージ</span></div>',
+salonos:'<div class="mk stk"><div class="grid2"><div class="pane">予約・カルテ</div><div class="pane">公式LINE・Keiro</div><div class="pane">Threads投稿</div><div class="pane">Instagram広告</div><div class="pane">LP制作</div><div class="pane">口コミ・HANDS NOTE</div></div><div class="pane" style="background:var(--amber-soft)"><div class="ttl">月1回・30分の勉強会<span class="lab">ZOOM</span></div><div class="lab">数字を見て、今月の打ち手を決める</div></div><span class="badge">画面イメージ</span></div>',
+jiko:'<div class="mk stk"><div class="pane"><div class="ttl">1件あたり（導入前 → 後）</div><div class="stk" style="margin-top:8px"><div class="row" style="grid-template-columns:52px 1fr 40px"><span>部位数</span><div class="bar"><i style="width:51%"></i></div><b class="n">4.3</b></div><div class="row" style="grid-template-columns:52px 1fr 40px"><span class="lab">前</span><div class="bar"><i class="a" style="width:26%"></i></div><b class="n">2.2</b></div><div class="row" style="grid-template-columns:52px 1fr 40px"><span>通院回数</span><div class="bar"><i style="width:100%"></i></div><b class="n">14</b></div><div class="row" style="grid-template-columns:52px 1fr 40px"><span class="lab">前</span><div class="bar"><i class="a" style="width:40%"></i></div><b class="n">5.6</b></div></div></div><div class="bub">保険会社から1部位と言われました…</div><div class="bub me" style="background:var(--blue);border-color:var(--blue);color:var(--on-blue)">診断書の記載を確認しましょう。まず…</div><span class="badge">グループ院の実績</span></div>'
+};
+
+/* ===== サービスのデータ ===== */
+var S=[
+{id:'threads',stage:1,name:'Threads Studio',kana:'スレッズ スタジオ',status:'live',
+ tl:'Threadsを触ったことがなくても、公式LINEの中だけで毎日の投稿が続きます。',
+ one:'20の質問に答えると、お店の事実だけを材料に投稿を作り、反応の良い時間に自動で出します。確認から書き直しまで、公式LINEの中で終わります。',
+ target:'整骨院・整体院・美容サロン、店舗全般',
+ from:9800,fromLabel:'9,800',unit:'円/月〜',tags:['7日間無料','縛りなし','初期0円'],
+ pains:['Threadsを触ったことがない。アカウントの作り方も分からない','SNSに使う時間がない。何を書けばいいか分からない','投稿しても反応がなく、続かない'],
+ flow:[['you','会員登録（3分）して、公式LINEを友だち追加。以後の操作はすべてLINEの中です'],['you','LINEで20の質問に答えます（メニュー・営業時間・強み・実際にあった話）。例文つきで聞きます'],['you','Threadsとつなぎます。開設マニュアルと、名前・自己紹介を貼るだけの「プロフィールの提案」をお送りします'],['we','毎日、お店の事実だけで投稿を作り、反応の良い時間に自動で出します'],['we','毎朝、前日の公開数と「次にやること」、10時にはMeta AIへの呼びかけ文がLINEに届きます'],['you','内容を確認してから出す設定なら、届いたカードの「これで投稿する」を押すだけです']],
+ outs:['毎日の自動投稿（プロは1日3件・反応の良い時間帯に）','Meta AIへの呼びかけ文（毎朝10時・ボタン1つで投稿）','プロフィールに固定する投稿と、公式LINE・予約ページへの案内','新しいアカウントの慣らし運転と、制限の兆しの自動検知','新着コメントの通知と返信案'],
+ plans:[{n:'プロ',p:'9,800',u:'円/月',rec:1,f:['自動投稿 1日3回','Meta AI呼びかけ文 毎朝1回','連携アカウント 3','LINEで管理 3人','手動AI生成 無制限']},{n:'ビジネス',p:'29,800',u:'円/月',f:['自動投稿 1日3回＋呼びかけ文','連携アカウント 10','LINEで管理 無制限','プロジェクト 50']},{n:'代理店',p:'55,000',u:'円/月',f:['クライアント用ID 100件まで','発行IDはプロ相当','提供価格は自由に設定','毎週月曜にクライアント別まとめ']}],
+ terms:[['無料お試し','7日間（期間中の解約は0円）'],['縛り','なし・いつでも解約'],['初期費用','0円']],
+ res:[['約7倍','導入前後の1日の表示回数（5店舗合計・2026年9月7日実測）'],['12→959回','ほぼ投稿していなかった整体院の1日の表示回数']],
+ faq:[['毎日、私は何をすればいいですか？','確認してから出す設定なら、LINEに届いた投稿カードの「これで投稿する」を押すだけです。確認なしの設定なら、何もしなくて構いません。'],['投稿の内容が嘘になりませんか？','登録した事実だけを材料にし、裏づけのない実績や大げさな表現は機械的に取り除きます。整体・整骨では価格や結果の断定も自動で言い換えます。'],['Threadsのアカウントがありません','Instagramのアカウントがあれば作れます。開設マニュアルをお送りし、設定が止まっていれば毎朝「次にやること」が届きます。']],
+ cta:['7日間無料で試す','https://threads-studio.com'],lp:'https://shittoruad-gif.github.io/threads-studio-lp/',video:'https://www.youtube.com/watch?v=XVB4AbYvm_g',doc:'threads',pair:['lp','keiro']},
+
+{id:'igads',stage:1,name:'Instagram広告 運用代行',status:'live',
+ tl:'広告文の作成から配信、毎日のチェックまで、まるごとおまかせ。',
+ one:'まだお店を知らない地域の方へ、InstagramとFacebookで広告を届けます。毎週、店舗専用の広告とページを作り、表現のルールを確かめてから配信します。',
+ target:'広告運用をまるごと任せたいオーナー様',
+ from:11000,fromLabel:'11,000',unit:'円/月〜',tags:['縛りなし','予算上限で自動停止'],
+ pains:['広告を出したいが、何から始めればいいか分からない','広告を任せても、何をしているのか見えない','広告費を使いすぎてしまわないか不安'],
+ flow:[['you','お店の情報と、週の予算を決めます'],['we','毎週、店舗専用の広告ページ（LP）と広告を作ります'],['we','医療広告のルールなど、表現を確かめてから配信します'],['we','毎日結果を集めて画面に表示。予算を超えそうなら自動で止めます'],['you','ダッシュボードと報告を見るだけ。判断が必要なときだけ連絡が届きます']],
+ outs:['毎週の新しい広告＋店舗専用LP','成果の良い広告が一目で分かるダッシュボード','予算の安全装置（上限で自動停止・毎朝の請求チェック）','予約1件あたりの広告費での判定と、作り直し'],
+ plans:[{n:'広告費 月5万円まで',p:'11,000',u:'円/月',rec:1,f:['最低料金','毎週の広告制作＋専用LP','予算上限で自動停止','ダッシュボード']},{n:'広告費 月5万円超',p:'広告費×20%',u:'＋税',f:['広告費6万円 → 13,200円','広告費10万円 → 22,000円','広告費20万円 → 44,000円','制作・配信・監視はすべて込み']}],
+ terms:[['広告費','Meta社へ直接お支払い（実費）'],['縛り','最低契約期間なし'],['解約','前月末までのご連絡']],
+ faq:[['広告費はいくら必要ですか？','お店の状況に合わせて決めます。週の上限を設定し、超えそうなら自動で配信を止めるため、使いすぎの心配はありません。'],['成果はどう判断しますか？','「予約1件あたりの広告費」で判断します。一定期間成果が出なければ止めて、広告とページを作り直します。'],['医療広告のルールは大丈夫ですか？','効果の断定・体験談・ビフォーアフター写真などの表現を毎回チェックし、リンク先のページまで点検してから配信します。']],
+ cta:['無料で相談する',FORM],lp:'https://ig-ads.s-toru.com/',video:'https://www.youtube.com/watch?v=Cc6t_HCy9sA',doc:'igads',pair:['lp','keiro']},
+
+{id:'makaseru',stage:1,name:'マカセル',status:'live',
+ tl:'Instagram・Facebook広告を、アプリと担当者のサポートでご自身で。',
+ one:'広告の文章・画像を自動で作り、お店の写真・動画からショート動画も作れます。結果の分析と「次にどうするか」の提案まで。広告表現のチェックも自動です。',
+ target:'治療院・整体・サロンなど、広告を自分で育てたい店舗',
+ from:19800,fromLabel:'19,800',unit:'円/月〜',tags:['7日間無料','縛りなし','初期0円'],
+ pains:['広告の文章・画像・動画を自分で用意できない','外注するほどの予算はない','広告を自分で回したいが、何が正解か分からない'],
+ flow:[['you','メニューを登録します'],['we','広告の文章・画像の案をまとめて作成。写真・動画からショート動画も作れます'],['you','気に入った案を選び、手順どおりに広告を出します'],['we','配信結果を自動で分析し、次の一手を提案します']],
+ outs:['すぐ出せる広告素材一式（文章・画像・ショート動画）','はじめの設定（Meta広告の準備から最初の広告まで・Zoom）','毎週月曜の朝、成績レポートを公式LINEでお届け','しっとるが作って出す広告・ショート動画（毎月）'],
+ plans:[{n:'ライト',p:'19,800',u:'円/月',rec:1,f:['作成 月60本','広告アカウント 1','しっとる制作 月1本']},{n:'プロ',p:'33,000',u:'円/月',f:['作成 月120本','広告アカウント 3','しっとる制作 月3本']},{n:'ビジネス',p:'49,500',u:'円/月',f:['作成 月200本','広告アカウント 6','しっとる制作 月5本']}],
+ terms:[['無料お試し','7日間（期間中の解約は0円）'],['縛り','なし'],['初期費用','0円'],['年払い','11か月分']],
+ faq:[['広告の出稿までやってくれますか？','お店の登録とMetaとの接続はしっとるが行います。どのプランでも、広告・ショート動画を作って出す・入れ替えるまで代わりに行う分が含まれます。'],['動画の素材は何を用意すれば？','お店で撮った動画がいちばんです（なければ写真）。撮り方の案内が画面と公式LINEに自動で届きます。'],['任せたくなったら？','Instagram広告 運用代行（まるごとおまかせ）へ切り替えられます。']],
+ cta:['7日間無料で始める','https://app.s-toru.com'],lp:'https://shittoruad-gif.github.io/makaseru-lp/',video:'https://www.youtube.com/watch?v=1Xa0zc1LI8g',doc:'makaseru',pair:['lp','keiro']},
+
+{id:'lp',stage:2,name:'LP制作サービス',status:'ready',
+ tl:'業種と強みを教えていただくだけで、申し込みにつながる1ページに。',
+ one:'広告やSNSで興味を持った方が、内容・料金・選ぶ理由を確かめて、そのまま相談や予約に進めるページを作ります。お悩み、解決のしかた、選ばれる理由、料金、よくあるご質問、申し込みの順で組み立てます。',
+ target:'開業・リニューアル、広告の受け皿が必要な店舗',
+ from:14300,fromLabel:'14,300',unit:'円/月',tags:['初期0円','修正 月3回無料'],
+ pains:['広告の飛び先が普通のホームページで、申し込みにつながらない','ページを作りたいが、何を載せればいいか分からない','作ったあと、直してもらえない'],
+ flow:[['you','業種・強み・料金・写真をお伝えください（全部そろっていなくても始められます）'],['we','申し込みにつながりやすい順番でページを組み立てます'],['we','初稿を素早く作り、スタッフがデザインと文言を仕上げます'],['we','計測の仕組みと公式LINEへの入口を入れて、公開まで行います'],['you','「もっと柔らかい表現に」など、言葉で伝えるだけで直せます']],
+ outs:['スマホで読みやすい、申し込み直結のLP 1ページ','URLの発行と公開作業','計測タグ・公式LINEへの導線の組み込み','公開後の修正（毎月3回まで無料）'],
+ plans:[{n:'LP制作・運用プラン',p:'14,300',u:'円/月',rec:1,f:['初期費用0円（制作費は月額に含む）','公開・計測タグ・LINE導線込み','公開後の修正 毎月3回まで無料','12か月のご契約（以後1か月ごと）']}],
+ terms:[['契約','12か月（以後1か月ごとの更新）'],['初期費用','0円'],['ドメイン等','使う場合は実費']],
+ faq:[['何を用意すればいいですか？','業種・サービス内容・お客様像が分かれば作れます。強み・実績・料金・写真があると、さらに良く仕上がります。'],['広告とセットで頼めますか？','はい。Instagram広告と組み合わせると、広告からページ、LINEまでがつながり、効果まで測れます。']],
+ cta:['無料で相談する',FORM],lp:'https://shittoruad-gif.github.io/lp-seisaku-lp/',video:'https://www.youtube.com/watch?v=8TNZOQdsL20',doc:'lp',pair:['igads','keiro']},
+
+{id:'keiro',stage:3,name:'Keiro・公式LINE構築',kana:'ケイロ',status:'live',
+ tl:'どの宣伝が効いたか、もう迷わない。公式LINEを“集客の道具”に。',
+ one:'広告・チラシ・SNSごとに専用のリンクやQRを用意し、友だち追加のきっかけを記録します。登録後は「はじめて／通院中」を自動で振り分け、ステップ配信やリマインダで案内を続けます。公式LINEがない方は、開設から作ります。',
+ target:'整骨院・整体院・美容サロン、店舗全般',
+ from:9800,fromLabel:'9,800',unit:'円/月',tags:['14日間無料','縛りなし'],
+ pains:['広告・チラシの、どれが効いたのか分からない','公式LINEを作ったが、あいさつ文のまま','新規は来るが、リピートにつながらない'],
+ flow:[['you','広告・チラシ・SNSごとに専用リンク（QR）を発行して貼るだけ'],['we','友だち追加を経路ごとに自動で記録し、「どこから来たか」を見える化します'],['we','追加直後からステップ配信で自動フォロー。はじめて／通院中も自動で振り分けます'],['we','友だち追加をMeta広告に知らせ、来てくれそうな方に届きやすくします'],['you','画面で「効いた経路」を確かめ、そこに予算を集中します']],
+ outs:['経路別の友だち追加・ブロック率・獲得単価の画面','ステップ配信・一斉配信・自動応答（上限なし）','リッチメニュー・クーポン・誕生日配信・スタンプカード','来店カード（受付のQRで来店ポイント）','受信箱（返信案つき）・リマインダ・回答フォーム'],
+ plans:[{n:'Keiro プロ',p:'9,800',u:'円/月',rec:1,f:['計測・配信 上限なし','会話ボット・Meta広告への成果連携','受信箱・リマインダ・フォーム','詳しい分析・CSV出力']},{n:'公式LINE 制作パック',p:'16,500',u:'円（初回）',f:['公式LINEの開設・初期構築こみ','リッチメニューのデザイン・設定','あいさつ・応答メッセージ','プロ30日間無料つき']}],
+ terms:[['無料お試し','アプリのみ14日・制作パック30日'],['縛り','なし（翌月から料金なし）'],['LINE料金','月200通まで無料〜（LINEヤフー社へ）']],
+ faq:[['公式LINEを持っていなくても使えますか？','公式LINE制作パック（16,500円）で、作成から運用開始まで一括で行います。プロプラン30日間無料がつきます。'],['設定は難しくないですか？','画面の案内どおりにコピーして貼るだけで、合わせて30分〜1時間ほどです。ホームページのURLから初期設定を自動で組み立てる機能もあります。'],['あとから文面を直したい','公式LINEのトークでご依頼いただけます（納品後の修正は1,100円〜）。']],
+ cta:['14日間無料で始める','https://keiro.s-toru.com'],lp:'https://keiro.s-toru.com',video:'https://www.youtube.com/watch?v=1mLBERCa5Lk',doc:'keiro',pair:['threads','igads']},
+
+{id:'salonkarte',stage:4,name:'サロンカルテ',status:'live',
+ tl:'アプリ不要・ログイン不要。予約・カルテ・回数券・顧客台帳をひとつに。',
+ one:'○×カレンダーで24時間ネット予約を受け付け、二重予約は仕組みで防ぎます。予約確認・前日のお知らせ・来店後のお礼はLINEとメールで自動。グループの院2店舗で毎日使っているシステムをお届けします。',
+ target:'整骨院・整体院・鍼灸院・サロン（多店舗も）',
+ from:19800,fromLabel:'19,800',unit:'円/月〜',tags:['全機能込み','無料デモあり'],
+ pains:['予約サイトの月額・送客手数料が重い','電話対応に追われ、営業時間外の予約を取りこぼす','二重予約や入れ忘れが怖い'],
+ flow:[['you','お客様はメニュー → 担当者 → 日時 → 連絡先の順に選ぶだけ'],['we','空き枠は営業時間・シフト・ほかの予約から自動で計算。同じ枠に2つの予約は入りません'],['we','初回のお客様には前金を自動でご案内（無断キャンセル対策）'],['we','予約が入るとスタッフのLINEへすぐ通知。お客様には確認と前日のお知らせ'],['you','見やすい予約表で確認するだけ。電話の予約もその場で登録できます']],
+ outs:['店舗専用の予約ページ（担当者別・メニュー別のURL／QR）','予約表つき管理画面（顧客台帳・失客アラート・回数券）','LINE・メールの自動通知（確認・前日・お礼・月次レポート）','解約時は予約・顧客・カルテをCSVでお渡し'],
+ plans:[{n:'1店舗',p:'19,800',u:'円/月',rec:1,f:['全機能込み','サーバー代・更新費 0円']},{n:'3店舗まで',p:'39,800',u:'円/月',f:['全機能込み','店舗をまたぐスタッフの空き状況も']},{n:'5店舗〜',p:'79,800',u:'円/月',f:['全機能込み','それ以外の店舗数はお見積り']}],
+ terms:[['初期費用','98,000円〜（移行・LINE接続・研修込み）'],['契約','最低6ヶ月、以降1ヶ月ごと'],['手数料','掲載料・送客手数料なし']],
+ faq:[['今の予約サイトから乗り換えられますか？','大手予約サービスから予約データと顧客台帳を移して切り替えた例があります。移行日までは今の仕組みと併用できます。'],['スタッフが覚えられるか不安です','本番に影響しない「練習モード」と、画面写真つきのマニュアルがあります。導入時に90分の研修も行います。']],
+ cta:['無料デモを相談する',FORM],lp:'https://shittoruad-gif.github.io/salonkarte-lp/',doc:'salonkarte',pair:['keiro','kuchikomi']},
+
+{id:'kuchikomi',stage:5,name:'口コミ作成アプリ',status:'ready',
+ tl:'お客様は質問に答えるだけ。Googleマップ用の口コミの下書きが完成します。',
+ one:'お店専用に、質問項目・選択肢・デザインまで作り込んだアプリを制作します。ステマ規制とGoogleのルールに配慮した設計で、「必ず治る」などの使えない表現は投稿前に自動でチェックします。',
+ target:'整骨院・整体院・サロン・教室など',
+ from:4980,fromLabel:'4,980',unit:'円/月',tags:['お店専用に制作','アプリのインストール不要'],
+ pains:['口コミをお願いしても「あとで書きますね」で終わる','「何を書けばいいか分からない」と言われる','星だけの評価が多い'],
+ flow:[['you','店名・地域・メニュー・よくある来店目的をお知らせください'],['we','質問項目・選択肢・デザインを設計し、お店専用のアプリを作ります'],['you','スマホで実際に触って確認。言い回しも調整できます'],['we','専用URLとQRコードをお渡しして公開します'],['you','お会計のときにQRコードをお見せするだけです']],
+ outs:['お店専用の口コミ作成アプリ（専用URL）','レジ横に置けるQRポスター','公式LINEやお礼メッセージで使える案内文','毎月の利用状況レポート'],
+ plans:[{n:'1店舗目',p:'4,980',u:'円/月',rec:1,f:['初期構築 33,000円','下書き 月100件まで','質問・メニューの変更 月1回','QRポスターの再発行']},{n:'2店舗目から',p:'+1,980',u:'円/月',f:['同じURLに店舗を追加','下書きは店舗ごとに月100件']}],
+ terms:[['初期構築','33,000円'],['お客様の操作','QRを読んで答えるだけ（1〜2分）']],
+ faq:[['やらせ・サクラになりませんか？','なりません。実体験であること・店舗関係者でないことを最初に確認し、内容の指定や見返りはありません。投稿するかどうかもお客様が決めます。'],['口コミは必ず増えますか？','件数のお約束はできません。お約束できるのは「書きたいけれど面倒」という負担を大きく減らすことです。']],
+ cta:['無料で相談する',FORM],lp:'https://kuchikomi.s-toru.com/',video:'https://www.youtube.com/watch?v=-hAvdYUfeCg',doc:'kuchikomi',pair:['salonkarte','keiro']},
+
+{id:'handsnote',stage:6,name:'月刊 HANDS NOTE',status:'soon',
+ tl:'新人教育の実技を、院単位で使い放題にする月刊の教材です。',
+ one:'部位ごとの評価・手技・運動指導をスライドで解説した教材を、院のスタッフ全員で使えます。腰・首肩・膝・足首・股関節・歩行の6冊・444ページが完成しています。',
+ target:'スタッフを抱える整骨院・整体院・治療院',
+ from:null,fromLabel:'近日公開',unit:'',tags:['無料サンプルあり','院単位で使い放題'],
+ pains:['新しいスタッフに、毎回同じことを一から教えている','外部セミナーは1人1回で高く、人数分は出せない','教える内容が人によってばらつく'],
+ flow:[['you','無料サンプル（19ページ）で中身をご確認ください'],['you','ご利用の院と、使うスタッフの人数をお知らせください'],['we','院ごとの学習ページのリンクをお渡しします'],['you','スタッフは1枚ずつめくって読み進めます（進み具合は自動で保存）'],['we','毎月、新しい号を追加します']],
+ outs:['スタッフ用の学習ページ（院ごとのリンク）','印刷して使えるPDF','毎月の新しい号'],
+ plans:[],
+ terms:[['料金','正式リリース時にご案内'],['人数','院単位で使い放題']],
+ faq:[['スタッフの人数分の契約が必要ですか？','いりません。院単位で使い放題です。']],
+ cta:['無料サンプルを請求する',FORM],lp:'https://shittoruad-gif.github.io/hands-note-lp/',doc:'handsnote',pair:['jiko','salonos']},
+
+{id:'jiko',stage:6,name:'交通事故コンサルティング',status:'live',
+ tl:'保険会社への対応と患者様へのご説明を、はじめから終わりまで。',
+ one:'交通事故の患者様を、最後まで診られるようにするための伴走型コンサルティングです。治療開始までの7段階を、つまずいている箇所から順にお教えします。代表が直接担当します。',
+ target:'整骨院・接骨院・鍼灸院',
+ from:600000,fromLabel:'600,000',unit:'円〜（税別）',tags:['分割払い可','質問し放題'],
+ pains:['保険会社に「1部位で」と言われ、そのまま受けている','併用できる整形外科が分からない','ご説明がうまくいかず、途中で通院が止まる','「健康保険で」と言われたときの切り替え方が分からない'],
+ flow:[['you','いまの状況と、困っていることをお聞かせください'],['you','3ヶ月・6ヶ月・12ヶ月から、合うプランを一緒に選びます'],['we','LINEまたはChatworkで、代表と院長先生のグループを作ります'],['we','1ヶ月目は「併用できる整形の探し方」「保険会社対応」「部位の取り方と患者教育」から'],['you','案件が起きたら、その場でグループに質問してください（回数の制限なし）']],
+ outs:['毎月のテーマに沿った勉強会（ZOOM・スタッフも参加可）','LINE・Chatworkでの個別案件のご相談（期間中ずっと）','7ヶ月目以降の院長面談・保険会社対応のロープレ','修了後の「交通事故対応ルーム」（月9,900円〜・税込）'],
+ plans:[{n:'3ヶ月プラン',p:'600,000',u:'円（税別）',f:['12回払い 月々50,000円','24回払い 月々25,000円']},{n:'6ヶ月プラン',p:'1,200,000',u:'円（税別）',rec:1,f:['12回払い 月々100,000円','24回払い 月々50,000円']},{n:'12ヶ月プラン',p:'2,400,000',u:'円（税別）',f:['12回払い 月々200,000円','24回払い 月々100,000円']}],
+ terms:[['修了後','対応ルーム 月9,900円〜（税込）'],['担当','代表 大木が直接']],
+ res:[['4.41倍','治療費の合計（導入前後10件ずつ）'],['2.2→4.3部位','1件あたりの平均部位数'],['5.6→14回','1件あたりの平均通院回数']],
+ faq:[['痛くないところを痛いことにするのですか？','しません。診断書に書かれていることを、書かれているとおりに請求できるようにするのが仕事です。'],['部位を正しく取ると、保険会社に目を付けられませんか？','根拠のある請求は、保険会社との正常なやり取りです。']],
+ cta:['無料で相談する',FORM],lp:'https://shittoruad-gif.github.io/jiko-consul-lp/',doc:'jiko',pair:['handsnote','salonkarte']},
+
+{id:'salonos',stage:7,name:'サロンOS',status:'ready',
+ tl:'しっとるの全サービスと公式LINE制作に、毎月の勉強会をつけたオールインワン。',
+ one:'ツールを別々に契約する代わりに、ひとつの契約で全サービスを使えます。月1回30分のZOOM勉強会で、数字の見方とその月の打ち手の決め方を、参加する院のみなさんと学びます。',
+ target:'整骨院・整体院・美容サロン',
+ from:81000,fromLabel:'81,000',unit:'円/月',tags:['初期費用なし','1プランのみ'],
+ pains:['ツールをばらばらに契約して管理が大変','数字はあるが、打ち手につなげられない','予約変更のLINE対応に時間を取られる'],
+ flow:[['we','公式LINEの制作から各ツールの設定まで、こちらで行います'],['we','全ツールが使い放題（予約・Keiro・Threads Studio・LP制作・Instagram広告 運用代行）'],['we','口コミ作成アプリをお店専用に制作。月刊 HANDS NOTE が毎月届きます'],['you','月1回30分の勉強会で、数字を見てその月の打ち手を決めます'],['we','決めた打ち手は各ツールが実行。変化を翌月に確かめます']],
+ outs:['しっとる全サービスの利用権','公式LINEの制作（16,500円相当）','口コミ作成アプリ・月刊 HANDS NOTE','月1回30分のグループ勉強会（ZOOM）','LINE・Chatworkの質問グループ'],
+ plans:[{n:'サロンOS',p:'81,000',u:'円/月',rec:1,f:['全サービスの利用権','公式LINE制作込み','グループ勉強会＋質問グループ','初期費用なし']},{n:'勉強会のみ',p:'15,000',u:'円/月',f:['月1回30分のZOOM勉強会','質問グループ','各サービスは含みません']}],
+ terms:[['初期費用','なし'],['実費','広告費・LINE料金などは別途']],
+ faq:[['勉強会に出られない月は？','大丈夫です。質問はLINE・Chatworkのグループでいつでも受け付け、その月に決めたこともそちらでお伝えします。']],
+ cta:['案内を希望する',FORM],doc:'salonos',pair:['salonkarte','keiro']}
+];
+var BY={};S.forEach(function(s){BY[s.id]=s});
+
+var STAGES=[
+ [1,'知ってもらう','投稿と広告で、まだお店を知らない方に届けます',['threads','igads','makaseru']],
+ [2,'詳しく伝える','興味を持った方に、内容と料金を落ち着いて読んでもらいます',['lp']],
+ [3,'つながる','公式LINEでつながり、どこから来たかを記録します',['keiro']],
+ [4,'予約・来店','電話を待たずに、24時間予約を受け付けます',['salonkarte']],
+ [5,'評判を広げる','満足した方の声を、Googleマップへ',['kuchikomi']],
+ [6,'院を強くする','スタッフ教育と、交通事故の患者様への対応',['handsnote','jiko']]
+];
+var STAGE_NAME={1:'知ってもらう',2:'詳しく伝える',3:'つながる',4:'予約・来店',5:'評判を広げる',6:'院を強くする',7:'全部まとめて'};
+
+function esc(t){return String(t).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function yen(n){return n.toLocaleString('ja-JP')}
+function priceHtml(s){return s.from==null?'<span class="tag soon">'+s.fromLabel+'</span>':'<span class="price-from n">'+s.fromLabel+'<small>'+s.unit+'</small></span>'}
+function ext(href,label,cls){return '<a class="'+(cls||'btn main arrow')+'" href="'+href+'" target="_blank" rel="noopener">'+label+'</a>'}
+
+/* ===== トップの組み立て ===== */
+(function(){
+ var pains=[['SNSに使う時間がない。何を書けばいいか分からない','threads'],['広告を出したいが、何から始めればいいか分からない','igads'],['広告は自分で回したい。でも素材が作れない','makaseru'],['広告を見た人が、申し込まずに帰ってしまう','lp'],['チラシや広告の、どれが効いたのか分からない','keiro'],['電話対応に追われて、時間外の予約を逃している','salonkarte'],['口コミをお願いしても、書いてもらえない','kuchikomi'],['新人スタッフに、毎回一から教えている','handsnote'],['交通事故の患者様を、保険会社に言われるまま診ている','jiko']];
+ document.getElementById('painList').innerHTML=pains.map(function(p){return '<a class="pain" href="#'+p[1]+'"><span class="q">?</span><p>'+p[0]+'</p><span>'+BY[p[1]].name+'</span></a>'}).join('');
+ document.getElementById('stageList').innerHTML=STAGES.map(function(st){
+  return '<div class="stage"><div class="stage-label"><span class="n">STAGE '+st[0]+'</span><h3>'+st[1]+'</h3><p>'+st[2]+'</p></div><div class="cards">'+st[3].map(function(id){var s=BY[id];
+   return '<a class="card" href="#'+id+'"><div class="vis">'+MOCK[id]+'</div><div class="body"><h4>'+s.name+'</h4><p class="tl">'+s.tl+'</p><div class="meta">'+priceHtml(s)+s.tags.slice(0,2).map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div><span class="more">くわしく見る</span></div></a>'}).join('')+'</div></div>'}).join('');
+})();
+
+/* ===== 詳細ページ ===== */
+function renderDetail(s){
+ var i=S.indexOf(s),prev=S[(i-1+S.length)%S.length],next=S[(i+1)%S.length];
+ var h='<div class="wrap">'+
+ '<nav class="crumb"><a href="#services">すべてのサービス</a><span class="muted">/ '+esc(s.name)+'</span></nav>'+
+ '<div class="d-hero"><div><p class="d-stg">'+'<span class="stg">STAGE '+(s.stage<7?s.stage:'ALL')+' ｜ '+STAGE_NAME[s.stage]+'</span></p><h1>'+esc(s.name)+'</h1><p class="tagline">'+esc(s.tl)+'</p><p class="one">'+esc(s.one)+'</p>'+
+ '<div class="tags">'+s.tags.map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'<span class="tag blue">対象：'+esc(s.target)+'</span></div>'+
+ '<div class="ctas">'+ext(s.cta[1],s.cta[0])+(s.cta[1]!==FORM?ext(FORM,'まず相談する','btn ghost'):'')+'</div></div>'+
+ '<div class="detail-vis">'+MOCK[s.id]+'</div></div>'+
+ '<section class="d-sec"><h2>こんなお悩みに</h2><ul class="d-pains">'+s.pains.map(function(p){return '<li>'+esc(p)+'</li>'}).join('')+'</ul></section>'+
+ '<section class="d-sec"><h2>使い方の流れ</h2><ol class="flow">'+s.flow.map(function(f){return '<li><p><span class="who'+(f[0]==='you'?' you':'')+'">'+(f[0]==='you'?'お店':'しっとる・仕組み')+'</span>'+esc(f[1])+'</p></li>'}).join('')+'</ol></section>'+
+ '<section class="d-sec"><h2>お届けするもの</h2><ul class="outs">'+s.outs.map(function(o){return '<li><span>'+esc(o)+'</span></li>'}).join('')+'</ul></section>';
+ if(s.res){h+='<section class="d-sec"><h2>実績</h2><div class="res">'+s.res.map(function(r){return '<div class="stat"><div class="v n" style="font-size:30px">'+r[0]+'</div><p>'+r[1]+'</p></div>'}).join('')+'</div><p class="note">一部の院・店舗の実測例で、同じ結果をお約束するものではありません。</p></section>'}
+ h+='<section class="d-sec"><h2>料金</h2>'+(s.plans.length?'<div class="plans">'+s.plans.map(function(p){return '<div class="plan'+(p.rec?' rec':'')+'"><h3>'+p.n+'</h3><div class="p n">'+p.p+'<small>'+p.u+'</small></div><ul>'+p.f.map(function(f){return '<li>'+esc(f)+'</li>'}).join('')+'</ul></div>'}).join('')+'</div>':'<p class="muted">価格は正式リリース時に確定します。無料サンプル（19ページ）はいまお渡しできます。</p>')+
+ '<ul class="terms">'+s.terms.map(function(t){return '<li><b>'+t[0]+'</b>'+esc(t[1])+'</li>'}).join('')+'</ul>'+
+ (s.id==='jiko'?'<p class="note">コンサル料金は税別、そのほかは税込です。</p>':'<p class="note">表示は税込です（2026年11月6日時点）。</p>')+'</section>'+
+ '<section class="d-sec"><h2>よくあるご質問</h2><div class="faq">'+s.faq.map(function(q){return '<details><summary>'+esc(q[0])+'</summary><p>'+esc(q[1])+'</p></details>'}).join('')+'</div></section>'+
+ '<section class="d-sec"><h2>もっと知りたい方へ</h2><div class="links">'+
+  (s.lp?'<a href="'+s.lp+'" target="_blank" rel="noopener">サービス紹介ページ</a>':'')+
+  (s.video?'<a href="'+s.video+'" target="_blank" rel="noopener">動画で見る（約1分）</a>':'')+
+  '<a href="'+DOC+s.doc+'-beginner.html" target="_blank" rel="noopener">はじめての方向けの資料</a>'+
+ '</div></section>'+
+ '<section class="d-sec"><h2>組み合わせると、もっと効きます</h2><div class="pair">'+s.pair.map(function(id){var p=BY[id];return '<a href="#'+id+'"><b>＋ '+p.name+'</b><span>'+p.tl+'</span></a>'}).join('')+'</div></section>'+
+ '<div class="d-cta"><div><h2>'+esc(s.name)+'について、聞いてみませんか</h2><p>「うちの業種でも使える？」だけでも大丈夫です。Zoomで画面をお見せしながらご説明します。</p></div><div class="ctas">'+ext(s.cta[1],s.cta[0])+(s.cta[1]!==FORM?ext(FORM,'無料で相談する','btn ghost'):ext('#diagnose','ほかのサービスも診断','btn ghost').replace(' target="_blank" rel="noopener"',''))+'</div></div>'+
+ '<nav class="pager"><a href="#'+prev.id+'"><span>← 前のサービス</span><b>'+prev.name+'</b></a><a class="nx" href="#'+next.id+'"><span>次のサービス →</span><b>'+next.name+'</b></a></nav>'+
+ '</div>';
+ return h;
+}
+
+/* ===== 画面の切り替え（#サービス名でそのページ） ===== */
+var home=document.getElementById('home'),detail=document.getElementById('detail'),dockA=document.getElementById('dockA'),dockB=document.getElementById('dockB');
+function route(){
+ var id=(location.hash||'').slice(1),s=BY[id];
+ if(s){
+  detail.innerHTML=renderDetail(s);home.hidden=true;detail.hidden=false;window.scrollTo(0,0);
+  document.title=s.name+' ｜ しっとる';
+  dockA.textContent='サービス一覧';dockA.href='#services';
+  dockB.textContent=s.cta[0];dockB.href=s.cta[1];
+ }else{
+  var wasDetail=!detail.hidden;
+  home.hidden=false;detail.hidden=true;document.title='しっとる 集客サービス';
+  dockA.textContent='1分診断';dockA.href='#diagnose';dockB.textContent='無料相談する';dockB.href=FORM;
+  if(id){var el=document.getElementById(id);if(el){requestAnimationFrame(function(){el.scrollIntoView({behavior:wasDetail?'auto':'smooth'})})}}
+  else if(wasDetail){window.scrollTo(0,0)}
+ }
+}
+window.addEventListener('hashchange',route);route();
+
+/* ===== 1分診断 ===== */
+var Q=[
+ {q:'いま、いちばん困っていることは？',o:[
+  ['know','新しいお客様に知ってもらえない','そもそもお店を知られていない'],
+  ['sns','SNSを始めたい／続かない','何を書けばいいか分からない'],
+  ['conv','見てもらえても、申し込みにならない','問い合わせ・予約につながらない'],
+  ['measure','どの宣伝が効いているか分からない','広告やチラシの判断が勘頼み'],
+  ['ops','予約の電話・管理に追われている','取りこぼしや二重予約が心配'],
+  ['repeat','リピートや口コミが増えない','一度きりで終わってしまう'],
+  ['staff','スタッフ教育に時間がかかる','教える内容がばらつく'],
+  ['jiko','交通事故の患者様への対応','保険会社とのやり取りが不安']]},
+ {q:'進め方のご希望は？',o:[
+  ['self','できるだけ自分でやりたい','費用をおさえて、手を動かせる'],
+  ['omakase','なるべくおまかせしたい','本業に集中したい'],
+  ['all','全部まとめて相談したい','何から手をつけるか一緒に決めたい']]},
+ {q:'お店の業種は？',o:[
+  ['clinic','整骨院・整体院・鍼灸院',''],
+  ['salon','美容サロン・エステ',''],
+  ['other','そのほかの店舗・教室','飲食・物販・スクールなど']]}
+];
+var A=[],qBody=document.getElementById('qBody'),qProg=document.getElementById('qProg'),qCount=document.getElementById('qCount');
+function drawQ(){
+ if(A.length>=Q.length){return drawResult()}
+ var k=A.length,q=Q[k];
+ qProg.style.width=(k/Q.length*100)+'%';qCount.textContent=(k+1)+' / '+Q.length;
+ qBody.innerHTML='<p class="quiz-q">Q'+(k+1)+'. '+q.q+'</p><div class="opts">'+q.o.map(function(o){return '<button type="button" class="opt" data-v="'+o[0]+'">'+o[1]+(o[2]?'<small>'+o[2]+'</small>':'')+'</button>'}).join('')+'</div>'+(k?'<button type="button" class="quiz-back" id="qBack">← ひとつ前に戻る</button>':'');
+ qBody.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){A.push(b.dataset.v);drawQ()})});
+ var bk=document.getElementById('qBack');if(bk)bk.addEventListener('click',function(){A.pop();drawQ()});
+}
+function recommend(){
+ var p=A[0],w=A[1],t=A[2],r=[],why={};
+ function add(id,reason){if(r.indexOf(id)<0){r.push(id);why[id]=reason}}
+ if(p==='know'){ if(w==='self'){add('makaseru','広告の素材づくりから分析まで、アプリで自分のペースで');add('threads','広告費をかけずに、毎日の投稿で知ってもらう')} else {add('igads','広告の作成・配信・毎日のチェックまでおまかせ');add('threads','広告と並行して、毎日の投稿で知ってもらう')} add('lp','広告を見た方の受け皿になるページ')}
+ if(p==='sns'){add('threads','20の質問に答えるだけで、毎日の投稿が続く');add('keiro','投稿から公式LINEにつながった数を計測');add('lp','プロフィールのリンク先に置くページ')}
+ if(p==='conv'){add('lp','内容・料金・選ぶ理由を、申し込みの順番で伝える');add('keiro','LINEでつながり、追加後の案内を自動で続ける'); add(w==='self'?'makaseru':'igads','受け皿ができたら、広告で見てもらう数を増やす')}
+ if(p==='measure'){add('keiro','広告・チラシ・SNSごとに、友だち追加を計測');add(w==='self'?'makaseru':'igads','効いた経路に、広告の予算を寄せる')}
+ if(p==='ops'){add('salonkarte','24時間ネット予約と予約表・顧客台帳をひとつに');add('keiro','予約前後の案内をLINEで自動化')}
+ if(p==='repeat'){add('keiro','ステップ配信・スタンプカード・来店カードで再来を促す');add('kuchikomi','満足した方の声をGoogleマップへ');add('salonkarte','失客アラートと回数券で、来なくなった方に気づく')}
+ if(p==='staff'){add('handsnote','評価・手技・運動指導を院単位で使い放題');if(t!=='clinic')why.handsnote='治療院向けの教材です。業種に合うかはご相談ください'}
+ if(p==='jiko'){add('jiko','保険会社対応と患者教育を、代表が直接伴走');add('handsnote','スタッフ全員で同じ内容を学べる教材');if(t!=='clinic')why.jiko='整骨院・接骨院・鍼灸院向けのサービスです。まずはご相談ください'}
+ if(w==='all'){add('salonos','全サービス＋公式LINE制作＋毎月の勉強会をひとつの契約で')}
+ return r.slice(0,4).map(function(id){return [id,why[id]]});
+}
+function drawResult(){
+ qProg.style.width='100%';qCount.textContent='結果';
+ var rec=recommend(),total=0,hasEst=true;
+ var main=rec.filter(function(x){return x[0]!=='salonos'});
+ main.slice(0,2).forEach(function(x){var s=BY[x[0]];if(s.from==null||x[0]==='jiko')hasEst=false;else total+=s.from});
+ var names=rec.map(function(x){return BY[x[0]].name}).join('・');
+ qBody.innerHTML='<div class="result-head"><p class="eyebrow">診断結果</p><h3>あなたのお店には、この順番がおすすめです</h3></div><div class="recs">'+
+  rec.map(function(x,i){var s=BY[x[0]];return '<div class="rec'+(i===0?' top1':'')+'"><span class="rank n">'+(i+1)+'</span><h4>'+s.name+'</h4><p>'+esc(x[1])+'　'+(s.from==null?'（近日公開）':'<b class="n">'+s.fromLabel+'</b>'+s.unit)+'</p><a href="#'+s.id+'">くわしく →</a></div>'}).join('')+'</div>'+
+  (hasEst&&total?'<div class="result-sum"><span class="muted">上位2つを始めた場合の目安</span><b class="n">月 '+yen(total)+'円〜</b><span class="note">税込・広告費などの実費は別途</span></div>':'')+
+  '<div class="result-act">'+ext(FORM,'この結果で無料相談する')+'<button type="button" class="btn ghost" id="qCopy">結果をコピー</button><button type="button" class="quiz-back" id="qRetry">もう一度診断する</button></div>'+
+  '<p class="note" style="margin-top:10px">フォームの「気になっているサービス」に「'+esc(names)+'」を選ぶと、ご相談がスムーズです。</p>';
+ document.getElementById('qRetry').addEventListener('click',function(){A=[];drawQ()});
+ document.getElementById('qCopy').addEventListener('click',function(){var b=this,txt='しっとる1分診断の結果：'+names;
+  try{navigator.clipboard.writeText(txt).then(function(){b.textContent='コピーしました'},function(){b.textContent=txt})}catch(e){b.textContent=txt}});
+}
+drawQ();
+
+/* ===== 料金シミュレーター ===== */
+var SIM=[
+ {id:'threads',opts:[['プロ',9800],['ビジネス',29800]],hint:'7日間無料・縛りなし'},
+ {id:'igads',opts:[['広告費 月3万円',11000,30000],['広告費 月5万円',11000,50000],['広告費 月10万円',22000,100000],['広告費 月20万円',44000,200000]],hint:'運用代行費。広告費はMeta社へ直接（下の実費に表示）'},
+ {id:'makaseru',opts:[['ライト',19800],['プロ',33000],['ビジネス',49500]],hint:'7日間無料・縛りなし・広告費は別途'},
+ {id:'lp',opts:[['1ページ',14300]],hint:'初期費用0円・12か月契約'},
+ {id:'keiro',opts:[['プロのみ（公式LINEあり）',9800,0,0],['プロ＋公式LINE制作',9800,0,16500]],hint:'14日間無料・縛りなし'},
+ {id:'salonkarte',opts:[['1店舗',19800,0,98000],['3店舗まで',39800,0,98000],['5店舗〜',79800,0,98000]],hint:'初期費用は98,000円〜（店舗数・移行量で変動）'},
+ {id:'kuchikomi',opts:[['1店舗',4980,0,33000],['2店舗',6960,0,33000],['3店舗',8940,0,33000]],hint:'初期構築 33,000円'},
+ {id:'salonos',opts:[['サロンOS',81000]],hint:'選ぶと、上のサービスはすべて含まれます'}
+];
+var simList=document.getElementById('simList');
+simList.innerHTML=SIM.map(function(r){var s=BY[r.id];return '<div class="sim-row" data-id="'+r.id+'"><label class="nm" for="c-'+r.id+'"><input type="checkbox" id="c-'+r.id+'">'+s.name+'</label>'+
+ (r.opts.length>1?'<select id="p-'+r.id+'" aria-label="'+s.name+'のプラン">'+r.opts.map(function(o,i){return '<option value="'+i+'">'+o[0]+'（'+yen(o[1])+'円）</option>'}).join('')+'</select>':'<span class="n">'+yen(r.opts[0][1])+'円</span>')+
+ '<span class="hint">'+r.hint+'</span></div>'}).join('');
+function calc(){
+ var os=document.getElementById('c-salonos').checked,m=0,ini=0,ad=0,picked=[];
+ SIM.forEach(function(r){var row=simList.querySelector('[data-id="'+r.id+'"]'),c=document.getElementById('c-'+r.id),sel=document.getElementById('p-'+r.id),o=r.opts[sel?+sel.value:0];
+  var off=os&&r.id!=='salonos';row.classList.toggle('off',off);
+  if(!c.checked)return;
+  if(r.id==='igads')ad+=o[2];
+  if(off){return}
+  m+=o[1];ini+=(o[3]||0);picked.push(BY[r.id].name);
+ });
+ document.getElementById('simMonthly').innerHTML=yen(m)+'<small>円</small>';
+ document.getElementById('simInit').textContent=ini?yen(ini)+'円〜':'0円';
+ document.getElementById('simExt').textContent=ad?'広告費 '+yen(ad)+'円':(m?'LINE料金など':'なし');
+ document.getElementById('simNote').textContent=os?'サロンOSには、全サービス・公式LINE制作・口コミアプリ・HANDS NOTE・毎月の勉強会が含まれます。':(picked.length?picked.join('＋')+' の目安です。':'左の一覧から、気になるサービスに印をつけてください。');
+}
+simList.addEventListener('change',calc);
+['threads','keiro'].forEach(function(id){document.getElementById('c-'+id).checked=true});calc();
+
+/* ===== コピー ===== */
+document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.copy).textContent;
+ try{navigator.clipboard.writeText(t).then(function(){b.textContent='コピーしました'},function(){b.textContent='選択してコピー'})}catch(e){b.textContent='選択してコピー'}})});
+</script>
