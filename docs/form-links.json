@@ -1,32 +1,7 @@
 {
-  "generatedAt": "2026-11-05T16:53:32.298Z",
+  "generatedAt": "2026-11-08T02:43:51.570Z",
   "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
   "choices": [
-    {
-      "choice": "Instagram広告運用代行",
-      "name": "インスタグラム広告 運用代行",
-      "tagline": "広告文の作成から配信・日々のチェックまで、まるごと代行",
-      "docs": [
-        {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://ig-ads.s-toru.com/"
-        },
-        {
-          "label": "動画：よくある質問（約1分）",
-          "url": "https://www.youtube.com/watch?v=Cc6t_HCy9sA"
-        },
-        {
-          "label": "資料：サービス紹介",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/igads-general.html",
-          "updated": "2026-11-03"
-        },
-        {
-          "label": "資料：はじめての方向け（専門用語なし）",
-          "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/igads-beginner.html",
-          "updated": "2026-10-11"
-        }
-      ]
-    },
     {
       "choice": "LP（ランディングページ）作成",
       "name": "LP制作サービス",
@@ -80,12 +55,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/threads-general.html",
-          "updated": "2026-11-03"
+          "updated": "2026-11-06"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/threads-beginner.html",
-          "updated": "2026-10-11"
+          "updated": "2026-11-06"
         }
       ]
     },
@@ -111,7 +86,7 @@
       ]
     },
     {
-      "choice": "マカセル（Instagram広告セルフ運用アプリ）",
+      "choice": "マカセル（Instagram広告の運用おまかせ＋動画制作アプリ）",
       "name": "マカセル",
       "tagline": "Instagram・Facebook広告を、アプリと一緒にご自身で運用できるサービス",
       "docs": [
@@ -126,12 +101,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-general.html",
-          "updated": "2026-11-03"
+          "updated": "2026-11-06"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-beginner.html",
-          "updated": "2026-10-30"
+          "updated": "2026-11-06"
         }
       ]
     },
@@ -151,12 +126,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/keiro-general.html",
-          "updated": "2026-10-11"
+          "updated": "2026-11-06"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/keiro-beginner.html",
-          "updated": "2026-10-11"
+          "updated": "2026-11-06"
         }
       ]
     },

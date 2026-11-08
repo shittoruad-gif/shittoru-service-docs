@@ -19,17 +19,16 @@ const SERVICES_JSON = join(HERE, "..", "service-catalog", "data", "services.json
 // ★選択肢の文字を変えたら、ここも同じ文字に直す（1文字でも違うと資料が付かない）。
 // docs が null のサービスは資料がまだ無い＝メールでは「面談でご案内します」とだけ書く。
 const FORM_CHOICES = [
-  { choice: "Instagram広告運用代行", docs: "igads", service: "insta-ad-agency" },
   { choice: "LP（ランディングページ）作成", docs: "lp", service: "lp-seisaku" },
   { choice: "HP作成", docs: null, service: null, name: "HP作成" },
   { choice: "公式LINE制作・運用サービス", docs: null, service: null, name: "公式LINE制作・運用" },
   { choice: "Threads自動投稿アプリ", docs: "threads", service: "threads-studio" },
   { choice: "サロンカルテ（予約・電子カルテ管理システム）", docs: "salonkarte", service: "booking-system" },
-  { choice: "マカセル（Instagram広告セルフ運用アプリ）", docs: "makaseru", service: "makaseru" },
+  { choice: "マカセル（Instagram広告の運用おまかせ＋動画制作アプリ）", docs: "makaseru", service: "makaseru" },
   { choice: "Keiro（公式LINEの流入経路計測ツール）", docs: "keiro", service: "keiro" },
   { choice: "サロンOS（集客・運営まるごとおまかせプラン）", docs: "salonos", service: "salon-os" },
   { choice: "口コミ作成アプリ制作", docs: "kuchikomi", service: "kuchikomi-app" },
-  // ↓ いまのフォームには選択肢が無い。フォームに同じ文字の選択肢を足せば、そのまま資料と紹介ページが付く。
+  // 2026-11-08 フォームに追加（Instagram広告運用代行はマカセルに統合してフォームから削除）
   { choice: "交通事故コンサルティング", docs: "jiko", service: "jiko" },
   { choice: "月刊 HANDS NOTE（臨床実技教材）", docs: "handsnote", service: "hands-note" },
 ];
