@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T14:18:36.252Z",
+  "generatedAt": "2026-11-20T01:47:43.251Z",
   "indexUrl": "https://shittoruad-gif.github.io/shittoru-service-docs/",
   "choices": [
     {
@@ -8,8 +8,8 @@
       "tagline": "業種と強みを教えていただくだけで、成約につながるLPに仕上げます",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/lp-seisaku-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#lp"
         },
         {
           "label": "動画：サービス紹介（約1分半）",
@@ -37,7 +37,12 @@
       "choice": "公式LINE制作・運用サービス",
       "name": "公式LINE制作・運用",
       "tagline": "",
-      "docs": []
+      "docs": [
+        {
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#keiro"
+        }
+      ]
     },
     {
       "choice": "Threads自動投稿アプリ",
@@ -45,8 +50,8 @@
       "tagline": "Threadsを触ったことがなくても、公式LINEの中だけで毎日投稿が続く集客サービス。Meta AIに紹介してもらう呼びかけ文も毎朝届きます",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/threads-studio-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#threads"
         },
         {
           "label": "動画：サービス紹介（約2分）",
@@ -70,8 +75,8 @@
       "tagline": "アプリ不要・ログイン不要。店舗専用のネット予約システム",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/salonkarte-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#salonkarte"
         },
         {
           "label": "資料：サービス紹介",
@@ -91,8 +96,8 @@
       "tagline": "Instagram・Facebook広告を、アプリと一緒にご自身で運用できるサービス",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/makaseru-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#makaseru"
         },
         {
           "label": "動画：サービス紹介（約2分）",
@@ -101,12 +106,12 @@
         {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-general.html",
-          "updated": "2026-11-06"
+          "updated": "2026-11-10"
         },
         {
           "label": "資料：はじめての方向け（専門用語なし）",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/makaseru-beginner.html",
-          "updated": "2026-11-06"
+          "updated": "2026-11-10"
         }
       ]
     },
@@ -116,8 +121,8 @@
       "tagline": "広告のクリックから公式LINE登録、来店後の対応までまるごと自動化",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://keiro.s-toru.com/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#keiro"
         },
         {
           "label": "動画：サービス紹介（約2分）",
@@ -141,6 +146,10 @@
       "tagline": "しっとるの全サービス＋公式LINE制作に、毎月のグループ勉強会までつけたオールインワン",
       "docs": [
         {
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#salonos"
+        },
+        {
           "label": "資料：サービス紹介",
           "url": "https://shittoruad-gif.github.io/shittoru-service-docs/v/salonos-general.html",
           "updated": "2026-10-12"
@@ -158,8 +167,8 @@
       "tagline": "お客様は質問に答えるだけ。Googleマップ用の口コミ下書きが自動でできます",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://kuchikomi.s-toru.com/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#kuchikomi"
         },
         {
           "label": "動画：サービス紹介（約2分）",
@@ -183,8 +192,8 @@
       "tagline": "保険会社対応と患者教育を、はじめから終わりまで",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/jiko-consul-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#jiko"
         },
         {
           "label": "資料：サービス紹介",
@@ -204,8 +213,8 @@
       "tagline": "新人教育の実技を、院単位で使い放題にする月刊の教材",
       "docs": [
         {
-          "label": "紹介ページ（まずはこちらで概要を）",
-          "url": "https://shittoruad-gif.github.io/hands-note-lp/"
+          "label": "ご案内ページ（実際の画面・料金・実績をまとめています）",
+          "url": "https://lp.s-toru.com/#handsnote"
         },
         {
           "label": "資料：サービス紹介",

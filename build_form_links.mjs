@@ -13,6 +13,8 @@ import { execFileSync } from "node:child_process";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const BASE_URL = "https://shittoruad-gif.github.io/shittoru-service-docs/";
+// 全サービス紹介LP。#のあとは LP の各サービスの id（threads / makaseru / lp / keiro / salonkarte / kuchikomi / handsnote / jiko / salonos）
+const SERVICE_LP_URL = "https://lp.s-toru.com/";
 const SERVICES_JSON = join(HERE, "..", "service-catalog", "data", "services.json");
 
 // フォームの選択肢 → manifest.json のキー／services.json の id。
@@ -21,7 +23,7 @@ const SERVICES_JSON = join(HERE, "..", "service-catalog", "data", "services.json
 const FORM_CHOICES = [
   { choice: "LP（ランディングページ）作成", docs: "lp", service: "lp-seisaku" },
   { choice: "HP作成", docs: null, service: null, name: "HP作成" },
-  { choice: "公式LINE制作・運用サービス", docs: null, service: null, name: "公式LINE制作・運用" },
+  { choice: "公式LINE制作・運用サービス", docs: null, service: null, name: "公式LINE制作・運用", page: "keiro" },
   { choice: "Threads自動投稿アプリ", docs: "threads", service: "threads-studio" },
   { choice: "サロンカルテ（予約・電子カルテ管理システム）", docs: "salonkarte", service: "booking-system" },
   { choice: "マカセル（Instagram広告の運用おまかせ＋動画制作アプリ）", docs: "makaseru", service: "makaseru" },
@@ -83,7 +85,10 @@ const choices = FORM_CHOICES.map((c) => {
   }
   const l = (c.docs && LINKS[c.docs]) || {};
   const head = [];
-  if (l.lp) head.push({ label: "紹介ページ（まずはこちらで概要を）", url: l.lp });
+  // 2026-11-20 三上様「このLPを、気になるサービスごとに分けて送る」→ いちばん上は全サービスLP（lp.s-toru.com）の
+  // そのサービスのページ（#id で直接開く）。サービスごとの旧紹介ページは送らない（内容が重なるため）。
+  const page = c.page ?? c.docs;
+  if (page) head.push({ label: "ご案内ページ（実際の画面・料金・実績をまとめています）", url: SERVICE_LP_URL + "#" + page });
   if (l.intro) head.push({ label: "動画：" + l.intro.title, url: "https://www.youtube.com/watch?v=" + l.intro.id });
   entry.docs.unshift(...head);
   return entry;
